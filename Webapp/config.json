@@ -1,0 +1,4390 @@
+{
+  "_help": "Edit this file instead of the code. Dates: start inclusive, end exclusive. 'report' controls the status report: data is fetched from previous_checked_date to current_checked_date (leave current empty = today; leave previous empty = date of last saved run). 'previous_report' = old report .xlsx used once to fill Previous Status. 'periods', 'thresholds' and 'chart' are not used by the status report.",
+  "api": {
+    "resolution": "min15",
+    "token": "936DA01F-9ABD-4D9D-80C7-02AF85C822A8",
+    "token_configured": true,
+    "url": "https://www11.enexion-sys.de/loaddata.asmx/GetLoadDataV2"
+  },
+  "chart": {
+    "background_fit": "center",
+    "background_image": "logo.png",
+    "background_opacity": 0.25,
+    "height": 580,
+    "use_dotnet": true,
+    "watermark": " ",
+    "watermark_opacity": 0.25,
+    "watermark_position": "bottom",
+    "watermark_size": 5,
+    "width": 1000
+  },
+  "clients": [
+    {
+      "channels": [
+        {
+          "channel": 17,
+          "channel_name": "Oldenburger Landstr. 1a | MaLo: 50355567297",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 9,
+          "meter_name": "Strom | Molkerei Ammerland eG | 26215 Wiefelstede-Dringenburg",
+          "sheet": "Strom|Ammerland|26215"
+        },
+        {
+          "channel": 19,
+          "channel_name": "Westerender Weg 24 | MaLo: 50354018796",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 10,
+          "meter_name": "Strom | Molkerei Ammerland eG | 26125 Oldenburg",
+          "sheet": "Strom|Ammerland|26125"
+        },
+        {
+          "channel": 20,
+          "channel_name": "Immegastr. 2 | MaLo: 50358861696",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 11,
+          "meter_name": "Strom | Molkerei Ammerland eG | 26835 Brinkum",
+          "sheet": "Strom|Ammerland|26835"
+        },
+        {
+          "channel": 21,
+          "channel_name": "Bahnhofstr. 34 | MaLo: 50422653945",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 14,
+          "meter_name": "Strom | Molkerei Ammerland eG | 39345 Vahldorf",
+          "sheet": "Strom|Ammerland|39345"
+        },
+        {
+          "channel": 22,
+          "channel_name": "Langebrügger Str. 5 | MaLo: 50357589455",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 15,
+          "meter_name": "Strom | Molkerei Ammerland eG | 26655 Westerstede",
+          "sheet": "Strom|Ammerland|26655"
+        },
+        {
+          "channel": 15,
+          "channel_name": "Oldenburger Landstr. 1a | MaLo: 10094358456",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 12,
+          "meter_name": "Gas | Molkerei Ammerland | 26215 Wiefelstede-Dringenburg",
+          "sheet": "Gas|Ammerland|26215"
+        },
+        {
+          "channel": 16,
+          "channel_name": "Westerender Weg 24 | MaLo: 50367168942",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 13,
+          "meter_name": "Gas | Molkerei Ammerland eG | 26125 Oldenburg",
+          "sheet": "Gas|Ammerland|26125"
+        },
+        {
+          "channel": 23,
+          "channel_name": "Langebrügger Str. 5 | MaLo: 50369593733",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 16,
+          "meter_name": "Gas | Molkerei Ammerland | 26655 Westerstede",
+          "sheet": "Gas|Ammerland|26655"
+        }
+      ],
+      "client": 27,
+      "enabled": true,
+      "name": "Ammerland"
+    },
+    {
+      "channels": [
+        {
+          "channel": 9,
+          "channel_name": "BGH Freital Am Stahlwerk 1  | MaLo: 10075099574",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 7,
+          "meter_name": "Strom | BGH Edelstahl Freital GmbH | 01705 Freital",
+          "sheet": "Strom|BGH|01705"
+        },
+        {
+          "channel": 10,
+          "channel_name": "BGH Freital Am Stahlwerk 1  | MaLo: 10074180944",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 7,
+          "meter_name": "Strom | BGH Edelstahl Freital GmbH | 01705 Freital",
+          "sheet": "Strom|BGH|01705|10"
+        },
+        {
+          "channel": 11,
+          "channel_name": "BGH Lugau | MaLo: 50090540904",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 8,
+          "meter_name": "Strom | BGH Edelstahl Lugau GmbH | 09385 Lugau/Erzgebirgskreis",
+          "sheet": "Strom|BGH|09385"
+        },
+        {
+          "channel": 12,
+          "channel_name": "BGH Lippendorf | MaLo: 50100016803",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 9,
+          "meter_name": "Strom | BGH Edelstahl Lippendorf GmbH | 04575 Neukieritzsch",
+          "sheet": "Strom|BGH|04575"
+        },
+        {
+          "channel": 13,
+          "channel_name": "BGH Siegen Industriestraße 9 | MaLo: 50537517143",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 10,
+          "meter_name": "Strom | BGH Edelstahl Siegen GmbH | 57076 Siegen",
+          "sheet": "Strom|BGH|57076"
+        },
+        {
+          "channel": 14,
+          "channel_name": "BGH Siegen Industriestraße 12 | MaLo: 50595452620",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 10,
+          "meter_name": "Strom | BGH Edelstahl Siegen GmbH | 57076 Siegen",
+          "sheet": "Strom|BGH|57076|14"
+        },
+        {
+          "channel": 18,
+          "channel_name": "BGH Nettetal Am Hotschgraf 3 | MaLo: 51240030513",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 11,
+          "meter_name": "Strom | BGH Feindraht GmbH | 41334 Nettetal",
+          "sheet": "Strom|BGH|41334"
+        },
+        {
+          "channel": 19,
+          "channel_name": "BGH Heubach Am Flugplatz 2 | MaLo: 51081096865",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 12,
+          "meter_name": "Strom | BGH Spezialstahl Süd GmbH | 73540 Heubach",
+          "sheet": "Strom|BGH|73540"
+        },
+        {
+          "channel": 20,
+          "channel_name": "BGH Isernhagen Chromstr. 3 | MaLo: 50418982184",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 13,
+          "meter_name": "Strom | BGH SL-Stahl GmbH | 30916 Isernhagen",
+          "sheet": "Strom|BGH|30916"
+        },
+        {
+          "channel": 16,
+          "channel_name": "BGH Siegen Stumme Loch Weg 1 | MaLo: 50593412808",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 14,
+          "meter_name": "Strom | BGH Edelstahl Siegen GmbH | 57072 Siegen",
+          "sheet": "Strom|BGH|57072"
+        },
+        {
+          "channel": 17,
+          "channel_name": "BGH Siegen Stumme Loch Weg 1 | MaLo: 50596227288",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 14,
+          "meter_name": "Strom | BGH Edelstahl Siegen GmbH | 57072 Siegen",
+          "sheet": "Strom|BGH|57072|17"
+        },
+        {
+          "channel": 21,
+          "channel_name": "BGH Siegen Eiserfelderstr. 98 | MaLo: 50526094706",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 14,
+          "meter_name": "Strom | BGH Edelstahl Siegen GmbH | 57072 Siegen",
+          "sheet": "Strom|BGH|57072|21"
+        },
+        {
+          "channel": 22,
+          "channel_name": "BGH Siegen Eiserfelderstr. 98 | MaLo: 50564865672",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 14,
+          "meter_name": "Strom | BGH Edelstahl Siegen GmbH | 57072 Siegen",
+          "sheet": "Strom|BGH|57072|22"
+        },
+        {
+          "channel": 23,
+          "channel_name": "BGH Siegen Eiserfelderstr. 98 | MaLo: 50599166706",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 14,
+          "meter_name": "Strom | BGH Edelstahl Siegen GmbH | 57072 Siegen",
+          "sheet": "Strom|BGH|57072|23"
+        },
+        {
+          "channel": 15,
+          "channel_name": "BGH Siegen Industriestraße 1 | MaLo: 50537198498",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 15,
+          "meter_name": "Strom | RPS Siegen GmbH | 57076 Siegen",
+          "sheet": "Strom|BGH|57076|15"
+        },
+        {
+          "channel": 5,
+          "channel_name": "BGH Siegen Industriestraße 9 | MaLo: 50603875326",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Gas | BGH Edelstahl Siegen GmbH | 57076 Siegen",
+          "sheet": "Gas|BGH|57076"
+        },
+        {
+          "channel": 6,
+          "channel_name": "BGH Siegen Industriestraße 12 | MaLo: 50613601985",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Gas | BGH Edelstahl Siegen GmbH | 57076 Siegen",
+          "sheet": "Gas|BGH|57076|6"
+        },
+        {
+          "channel": 4,
+          "channel_name": "BGH Freital | MaLo: 10072030092",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Gas | BGH Edelstahl Freital GmbH | 01705 Freital",
+          "sheet": "Gas|BGH|01705"
+        },
+        {
+          "channel": 3,
+          "channel_name": "BGH Neukieritzsch | MaLo: 50111544687",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 4,
+          "meter_name": "Gas | BGH Edelstahl Lippendorf GmbH | 04575 Neukieritzsch",
+          "sheet": "Gas|BGH|04575"
+        },
+        {
+          "channel": 2,
+          "channel_name": "BGH Lugau | MaLo: 10232462910",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 5,
+          "meter_name": "Gas | BGH Edelstahl Lugau GmbH | 09385 Lugau/Erzgebirgskreis",
+          "sheet": "Gas|BGH|09385"
+        },
+        {
+          "channel": 1,
+          "channel_name": "BGH Siegen Stumme Loch Aggregated | MaLo: 50603604634",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 6,
+          "meter_name": "Gas | BGH Edelstahl Siegen GmbH | 57072 Siegen",
+          "sheet": "Gas|BGH|57072"
+        }
+      ],
+      "client": 50,
+      "enabled": true,
+      "name": "BGH"
+    },
+    {
+      "channels": [
+        {
+          "channel": 15,
+          "channel_name": "Werk I  Im Weinhof 36 | MaLo: 50933014652",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 15,
+          "meter_name": "Strom | BILSTEIN GmbH & Co. KG | 58119 Hagen",
+          "sheet": "Strom|Bilstein|58119"
+        },
+        {
+          "channel": 16,
+          "channel_name": "Werk I  Im Weinhof 36 (virtuelle Notversorgung) | MaLo: 50933187863",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 15,
+          "meter_name": "Strom | BILSTEIN GmbH & Co. KG | 58119 Hagen",
+          "sheet": "Strom|Bilstein|58119|16"
+        },
+        {
+          "channel": 17,
+          "channel_name": "Werk II  Oeger Str. 1135 | MaLo: 50933025790",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 15,
+          "meter_name": "Strom | BILSTEIN GmbH & Co. KG | 58119 Hagen",
+          "sheet": "Strom|Bilstein|58119|17"
+        },
+        {
+          "channel": 18,
+          "channel_name": "Werk II  Oeger Str. 24 | MaLo: 50936218011",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 15,
+          "meter_name": "Strom | BILSTEIN GmbH & Co. KG | 58119 Hagen",
+          "sheet": "Strom|Bilstein|58119|18"
+        },
+        {
+          "channel": 19,
+          "channel_name": "Alemannenweg 32 | MaLo: 50933023083",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 16,
+          "meter_name": "Strom | HUGO VOGELSANG GmbH & Co. KG | 58119 Hagen",
+          "sheet": "Strom|Bilstein|58119|19"
+        },
+        {
+          "channel": 20,
+          "channel_name": "Alemannenweg 29 | MaLo: 50933023091",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 16,
+          "meter_name": "Strom | HUGO VOGELSANG GmbH & Co. KG | 58119 Hagen",
+          "sheet": "Strom|Bilstein|58119|20"
+        },
+        {
+          "channel": 21,
+          "channel_name": "Im Klosterkamp 16 | MaLo: 50933023108",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 16,
+          "meter_name": "Strom | HUGO VOGELSANG GmbH & Co. KG | 58119 Hagen",
+          "sheet": "Strom|Bilstein|58119|21"
+        },
+        {
+          "channel": 22,
+          "channel_name": "Unterberchum 30 | MaLo: 50933000487",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 17,
+          "meter_name": "Strom | BILSTEIN GmbH & Co. KG | 58093 Hagen",
+          "sheet": "Strom|Bilstein|58093"
+        },
+        {
+          "channel": 33,
+          "channel_name": "Werk I  Im Weinhof 36 | MaLo: 50933014652",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 22,
+          "meter_name": "Strom | 15 Min Bericht | BILSTEIN GmbH & Co. KG | 58119 Hagen",
+          "sheet": "Strom|Bilstein|58119|33"
+        },
+        {
+          "channel": 34,
+          "channel_name": "Werk II  Oeger Str. 1135 | MaLo: 50933025790",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 22,
+          "meter_name": "Strom | 15 Min Bericht | BILSTEIN GmbH & Co. KG | 58119 Hagen",
+          "sheet": "Strom|Bilstein|58119|34"
+        },
+        {
+          "channel": 35,
+          "channel_name": "Werk II  Oeger Str. 24 | MaLo: 50936218011",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 22,
+          "meter_name": "Strom | 15 Min Bericht | BILSTEIN GmbH & Co. KG | 58119 Hagen",
+          "sheet": "Strom|Bilstein|58119|35"
+        },
+        {
+          "channel": 36,
+          "channel_name": "Alemannenweg 32 | MaLo: 50933023083",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 23,
+          "meter_name": "Strom | 15 Min Bericht | HUGO VOGELSANG GmbH & Co. KG | 58119 Hagen",
+          "sheet": "Strom|Bilstein|58119|36"
+        },
+        {
+          "channel": 37,
+          "channel_name": "Alemannenweg 29 | MaLo: 50933023091",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 23,
+          "meter_name": "Strom | 15 Min Bericht | HUGO VOGELSANG GmbH & Co. KG | 58119 Hagen",
+          "sheet": "Strom|Bilstein|58119|37"
+        },
+        {
+          "channel": 38,
+          "channel_name": "Im Klosterkamp 16 | MaLo: 50933023108",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 23,
+          "meter_name": "Strom | 15 Min Bericht | HUGO VOGELSANG GmbH & Co. KG | 58119 Hagen",
+          "sheet": "Strom|Bilstein|58119|38"
+        },
+        {
+          "channel": 39,
+          "channel_name": "Unterberchum 30 | MaLo: 50933000487",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 24,
+          "meter_name": "Strom | 15 Min Bericht | BILSTEIN GmbH & Co. KG | 58093 Hagen",
+          "sheet": "Strom|Bilstein|58093|39"
+        },
+        {
+          "channel": 23,
+          "channel_name": "Werk I - Virtuell (Summe aus Bilstein Im Weinhof + Färberstr.) | MaLo: 50603374899",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 18,
+          "meter_name": "Gas | BILSTEIN GmbH & Co. KG | 58119 Hagen",
+          "sheet": "Gas|Bilstein|58119"
+        },
+        {
+          "channel": 24,
+          "channel_name": "Werk II  Oeger Str. 1135 | MaLo: 50601507997",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 18,
+          "meter_name": "Gas | BILSTEIN GmbH & Co. KG | 58119 Hagen",
+          "sheet": "Gas|Bilstein|58119|24"
+        },
+        {
+          "channel": 25,
+          "channel_name": "Werk II  Oeger Str. 24 | MaLo: 50603613437",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 18,
+          "meter_name": "Gas | BILSTEIN GmbH & Co. KG | 58119 Hagen",
+          "sheet": "Gas|Bilstein|58119|25"
+        },
+        {
+          "channel": 32,
+          "channel_name": "Färberstr. | MaLo: 50603613718",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 18,
+          "meter_name": "Gas | BILSTEIN GmbH & Co. KG | 58119 Hagen",
+          "sheet": "Gas|Bilstein|58119|32"
+        },
+        {
+          "channel": 26,
+          "channel_name": "Alemannenweg 29 | MaLo: 50603613578",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 19,
+          "meter_name": "Gas | HUGO VOGELSANG GmbH & Co. KG | 58119 Hagen",
+          "sheet": "Gas|Bilstein|58119|26"
+        },
+        {
+          "channel": 27,
+          "channel_name": "Unterberchum 30 | MaLo: 50931427352",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 20,
+          "meter_name": "Gas | BILSTEIN GmbH & Co. KG | 58093 Hagen",
+          "sheet": "Gas|Bilstein|58093"
+        }
+      ],
+      "client": 12,
+      "enabled": true,
+      "name": "Bilstein"
+    },
+    {
+      "channels": [
+        {
+          "channel": 8,
+          "channel_name": "Rahestraße 7 | MaLo: 51597352909",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | Bischof + Klein SE & Co. KG | 49525 Lengerich",
+          "sheet": "Strom|Bischof Klein|49525"
+        },
+        {
+          "channel": 6,
+          "channel_name": "Industriestraße 1 | MaLo: 50309756911",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Strom | Bischof + Klein SE & Co. KG | 94357 Konzell",
+          "sheet": "Strom|Bischof Klein|94357"
+        },
+        {
+          "channel": 7,
+          "channel_name": "Industriestraße 1 | MaLo: 50323208964",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Strom | Bischof + Klein SE & Co. KG | 94357 Konzell",
+          "sheet": "Strom|Bischof Klein|94357|7"
+        },
+        {
+          "channel": 1,
+          "channel_name": "Rahestraße 47 | MaLo: 51597099725",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 4,
+          "meter_name": "Gas | Bischof + Klein SE & Co. KG  | 49525 Lengerich",
+          "sheet": "Gas|Bischof Klein|49525"
+        },
+        {
+          "channel": 2,
+          "channel_name": "Rahestraße 47 | MaLo: 51597003825",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 4,
+          "meter_name": "Gas | Bischof + Klein SE & Co. KG  | 49525 Lengerich",
+          "sheet": "Gas|Bischof Klein|49525|2"
+        },
+        {
+          "channel": 3,
+          "channel_name": "Rahestraße 47 | MaLo: 51597003924",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 4,
+          "meter_name": "Gas | Bischof + Klein SE & Co. KG  | 49525 Lengerich",
+          "sheet": "Gas|Bischof Klein|49525|3"
+        },
+        {
+          "channel": 4,
+          "channel_name": "Rahestraße 47 | MaLo: 51597003974",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 4,
+          "meter_name": "Gas | Bischof + Klein SE & Co. KG  | 49525 Lengerich",
+          "sheet": "Gas|Bischof Klein|49525|4"
+        },
+        {
+          "channel": 5,
+          "channel_name": "Rahestraße 47 | MaLo: 51597364293",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 4,
+          "meter_name": "Gas | Bischof + Klein SE & Co. KG  | 49525 Lengerich",
+          "sheet": "Gas|Bischof Klein|49525|5"
+        },
+        {
+          "channel": 11,
+          "channel_name": "Rahestraße 47 | MaLo: 51597415731",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 4,
+          "meter_name": "Gas | Bischof + Klein SE & Co. KG  | 49525 Lengerich",
+          "sheet": "Gas|Bischof Klein|49525|11"
+        }
+      ],
+      "client": 68,
+      "enabled": true,
+      "name": "Bischof Klein"
+    },
+    {
+      "channels": [
+        {
+          "channel": 3,
+          "channel_name": "Werk Pfieffewiesen (WAP) 2 Zähler | MaLo: 50862182108",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom  | B. Braun Melsungen AG | 34212 Melsungen",
+          "sheet": "Strom|Braun|34212"
+        },
+        {
+          "channel": 4,
+          "channel_name": "Werk A | MaLo: 50862204499",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom  | B. Braun Melsungen AG | 34212 Melsungen",
+          "sheet": "Strom|Braun|34212|4"
+        },
+        {
+          "channel": 5,
+          "channel_name": "Werk W (Avitum) | MaLo: 50853016267",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom  | B. Braun Melsungen AG | 34212 Melsungen",
+          "sheet": "Strom|Braun|34212|5"
+        },
+        {
+          "channel": 6,
+          "channel_name": "Werk E | MaLo: 50862215892",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom  | B. Braun Melsungen AG | 34212 Melsungen",
+          "sheet": "Strom|Braun|34212|6"
+        },
+        {
+          "channel": 7,
+          "channel_name": "Werk C | MaLo: 50862210644",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom  | B. Braun Melsungen AG | 34212 Melsungen",
+          "sheet": "Strom|Braun|34212|7"
+        },
+        {
+          "channel": 8,
+          "channel_name": "Werk F (Station PNS) | MaLo: 50862199343",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom  | B. Braun Melsungen AG | 34212 Melsungen",
+          "sheet": "Strom|Braun|34212|8"
+        },
+        {
+          "channel": 9,
+          "channel_name": "ALMO | MaLo: 50143462576",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Strom  | ALMO-Erzeugnisse Erwin Busch GmbH | 34454 Bad Arolsen",
+          "sheet": "Strom|Braun|34454"
+        },
+        {
+          "channel": 10,
+          "channel_name": "Saxonia Bad Gottleuba-Berggießhübel | MaLo: 10074335614",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 4,
+          "meter_name": "Strom  | B. Braun Avitum Saxonia GmbH | 01819 Bad Gottleuba-Berggießhübel",
+          "sheet": "Strom|Braun|01819"
+        },
+        {
+          "channel": 11,
+          "channel_name": "Berlin Mistelweg | MaLo: 50727601152",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 5,
+          "meter_name": "Strom  | B. Braun Melsungen AG | 12357 Berlin",
+          "sheet": "Strom|Braun|12357"
+        },
+        {
+          "channel": 12,
+          "channel_name": "Saxonia Wilsdruff | MaLo: 10072756747",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 6,
+          "meter_name": "Strom  | B. Braun Avitum Saxonia GmbH | 01723 Wilsdruff",
+          "sheet": "Strom|Braun|01723"
+        },
+        {
+          "channel": 13,
+          "channel_name": "Avitum AG | MaLo: 10208966136",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 7,
+          "meter_name": "Strom  | B. Braun Avitum AG Werk Glandorf | 49219 Glandorf",
+          "sheet": "Strom|Braun|49219"
+        },
+        {
+          "channel": 14,
+          "channel_name": "Saxonia Radeberg | MaLo: 10074257058",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 8,
+          "meter_name": "Strom  | B. Braun Avitum Saxonia GmbH | 01454 Radeberg",
+          "sheet": "Strom|Braun|01454"
+        },
+        {
+          "channel": 15,
+          "channel_name": "Saxonia Radeberg II | MaLo: 10074335515",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 8,
+          "meter_name": "Strom  | B. Braun Avitum Saxonia GmbH | 01454 Radeberg",
+          "sheet": "Strom|Braun|01454|15"
+        },
+        {
+          "channel": 16,
+          "channel_name": "Werk V (Spangenberg) | MaLo: 50853021844",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 9,
+          "meter_name": "Strom  | B. Braun Melsungen AG | 34286 Spangenberg",
+          "sheet": "Strom|Braun|34286"
+        },
+        {
+          "channel": 17,
+          "channel_name": "Werk M - Paul Müller Technische Produkte | MaLo: 50862205372",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 10,
+          "meter_name": "Strom  | Paul Müller Technische Produkte GmbH | 34212 Melsungen",
+          "sheet": "Strom|Braun|34212|17"
+        },
+        {
+          "channel": 18,
+          "channel_name": "Berlin Sieversufer | MaLo: 50706971807",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 11,
+          "meter_name": "Strom  | B. Braun Melsungen AG | 12359 Berlin",
+          "sheet": "Strom|Braun|12359"
+        },
+        {
+          "channel": 33,
+          "channel_name": "Lände 2 | MaLo: 10174422428",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 20,
+          "meter_name": "Strom | Nutrichem Diät + Pharma GmbH | 91154 Roth",
+          "sheet": "Strom|Braun|91154"
+        },
+        {
+          "channel": 19,
+          "channel_name": "Werk WAP 2 | MaLo: 50862226865",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 12,
+          "meter_name": "Gas | B. Braun Melsungen AG | 34212 Melsungen",
+          "sheet": "Gas|Braun|34212"
+        },
+        {
+          "channel": 20,
+          "channel_name": "Werk A Produktionsbetrieb | MaLo: 50862226948",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 12,
+          "meter_name": "Gas | B. Braun Melsungen AG | 34212 Melsungen",
+          "sheet": "Gas|Braun|34212|20"
+        },
+        {
+          "channel": 21,
+          "channel_name": "Werk WAP 1 | MaLo: 50862226815",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 12,
+          "meter_name": "Gas | B. Braun Melsungen AG | 34212 Melsungen",
+          "sheet": "Gas|Braun|34212|21"
+        },
+        {
+          "channel": 22,
+          "channel_name": "Werk E | MaLo: 50862226831",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 12,
+          "meter_name": "Gas | B. Braun Melsungen AG | 34212 Melsungen",
+          "sheet": "Gas|Braun|34212|22"
+        },
+        {
+          "channel": 23,
+          "channel_name": "Werk C | MaLo: 50862226823",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 12,
+          "meter_name": "Gas | B. Braun Melsungen AG | 34212 Melsungen",
+          "sheet": "Gas|Braun|34212|23"
+        },
+        {
+          "channel": 24,
+          "channel_name": "Werk D | MaLo: 50862226849",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 12,
+          "meter_name": "Gas | B. Braun Melsungen AG | 34212 Melsungen",
+          "sheet": "Gas|Braun|34212|24"
+        },
+        {
+          "channel": 25,
+          "channel_name": "Werk S | MaLo: 50862226857",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 12,
+          "meter_name": "Gas | B. Braun Melsungen AG | 34212 Melsungen",
+          "sheet": "Gas|Braun|34212|25"
+        },
+        {
+          "channel": 34,
+          "channel_name": "Werk Wave | MaLo: 50862226922",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 12,
+          "meter_name": "Gas | B. Braun Melsungen AG | 34212 Melsungen",
+          "sheet": "Gas|Braun|34212|34"
+        },
+        {
+          "channel": 26,
+          "channel_name": "Werk Berlin M Energiezentrale 1 | MaLo: 50062226425",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 13,
+          "meter_name": "Gas | B. Braun Melsungen AG | 12357 Berlin",
+          "sheet": "Gas|Braun|12357"
+        },
+        {
+          "channel": 27,
+          "channel_name": "Avitum Werk Glandorf | MaLo: 10208768285",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 14,
+          "meter_name": "Gas | B. Braun Avitum AG Werk Glandorf | 49219 Glandorf",
+          "sheet": "Gas|Braun|49219"
+        },
+        {
+          "channel": 28,
+          "channel_name": "ALMO | MaLo: 50142008264",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 15,
+          "meter_name": "Gas | ALMO-Erzeugnisse Erwin Busch GmbH | 34454 Bad Arolsen",
+          "sheet": "Gas|Braun|34454"
+        },
+        {
+          "channel": 29,
+          "channel_name": "Saxonia Bad Gottleuba-Berggießhübe | MaLo: 10073208945",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 16,
+          "meter_name": "Gas | B. Braun Avitum Saxonia GmbH | 01819 Bad Gottleuba-Berggießhübel",
+          "sheet": "Gas|Braun|01819"
+        },
+        {
+          "channel": 30,
+          "channel_name": "Saxonia Wilsdruff | MaLo: 10070765518",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 17,
+          "meter_name": "Gas | B. Braun Avitum Saxonia GmbH | 01723 Wilsdruff",
+          "sheet": "Gas|Braun|01723"
+        },
+        {
+          "channel": 31,
+          "channel_name": "Werk Berlin S | MaLo: 50062226326",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 18,
+          "meter_name": "Gas | B. Braun Melsungen AG | 12359 Berlin",
+          "sheet": "Gas|Braun|12359"
+        },
+        {
+          "channel": 32,
+          "channel_name": "Werk V (Spangenberg) | MaLo: 50853383658",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 19,
+          "meter_name": "Gas | B. Braun Melsungen AG | 34286 Spangenberg",
+          "sheet": "Gas|Braun|34286"
+        },
+        {
+          "channel": 35,
+          "channel_name": "Saxonia Radeberg | MaLo: 10072941306",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 21,
+          "meter_name": "Gas | B. Braun Avitum Saxonia GmbH | 01454 Radeberg",
+          "sheet": "Gas|Braun|01454"
+        },
+        {
+          "channel": 36,
+          "channel_name": "Lände 2 | MaLo: 10174613209",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 22,
+          "meter_name": "Gas | Nutrichem Diät + Pharma GmbH | 91154 Roth",
+          "sheet": "Gas|Braun|91154"
+        }
+      ],
+      "client": 83,
+      "enabled": true,
+      "name": "Braun"
+    },
+    {
+      "channels": [
+        {
+          "channel": 8,
+          "channel_name": "Werkseinspeisung | MaLo: 51257304901",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 8,
+          "meter_name": "Strom | Chocoladefabriken Lindt & Sprüngli GmbH | 52072 Aachen",
+          "sheet": "Strom|Chocoladefabriken|52072"
+        },
+        {
+          "channel": 9,
+          "channel_name": "Krickellager | MaLo: 51257304919",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 8,
+          "meter_name": "Strom | Chocoladefabriken Lindt & Sprüngli GmbH | 52072 Aachen",
+          "sheet": "Strom|Chocoladefabriken|52072|9"
+        },
+        {
+          "channel": 7,
+          "channel_name": "Süsterfeldstraße 130 | MaLo: 51258918785",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 9,
+          "meter_name": "Gas | Chocoladefabriken Lindt & Sprüngli GmbH | 52072 Aachen",
+          "sheet": "Gas|Chocoladefabriken|52072"
+        }
+      ],
+      "client": 44,
+      "enabled": true,
+      "name": "Chocoladefabriken"
+    },
+    {
+      "channels": [
+        {
+          "channel": 2,
+          "channel_name": "Kraftwerk | MaLo: 10082454224",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Gas | DHW Deutsche Hydrierwerke GmbH Rodleben |06861 Dessau-Roßlau OT Rodleben",
+          "sheet": "Gas|DHW|06861"
+        },
+        {
+          "channel": 3,
+          "channel_name": "Technologie | MaLo: 10082610082",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Gas | DHW Deutsche Hydrierwerke GmbH Rodleben |06861 Dessau-Roßlau OT Rodleben",
+          "sheet": "Gas|DHW|06861|3"
+        }
+      ],
+      "client": 79,
+      "enabled": true,
+      "name": "DHW"
+    },
+    {
+      "channels": [
+        {
+          "channel": 2,
+          "channel_name": "Muldenhütten 25 | MaLo: 50096956220",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | Clarios Recycling Freiberg GmbH | 09599 Freiberg",
+          "sheet": "Strom|Ecobat Freiberg|09599"
+        },
+        {
+          "channel": 8,
+          "channel_name": "Emser Straße 11  | MaLo: 50280332202",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 4,
+          "meter_name": "Strom | Clarios Recycling Braubach GmbH | 56338 Braubach",
+          "sheet": "Strom|Ecobat Freiberg|56338"
+        },
+        {
+          "channel": 9,
+          "channel_name": "Emser Straße 11 | MaLo: 50280343887",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 4,
+          "meter_name": "Strom | Clarios Recycling Braubach GmbH | 56338 Braubach",
+          "sheet": "Strom|Ecobat Freiberg|56338|9"
+        },
+        {
+          "channel": 1,
+          "channel_name": "Muldenhütten 1 | MaLo: 10232462960",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Gas | Clarios Recycling Freiberg GmbH | 09599 Freiberg",
+          "sheet": "Gas|Ecobat Freiberg|09599"
+        },
+        {
+          "channel": 7,
+          "channel_name": "Emser Straße 11  | MaLo: 51096653460",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 5,
+          "meter_name": "Gas | Clarios Recycling Braubach GmbH | 56338 Braubach",
+          "sheet": "Gas|Ecobat Freiberg|56338"
+        },
+        {
+          "channel": 12,
+          "channel_name": "SLP Summe",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 6,
+          "meter_name": "Gas | Clarios Recycling Braubach GmbH | 56338 Braubach",
+          "sheet": "Gas|Ecobat Freiberg|56338|12"
+        }
+      ],
+      "client": 69,
+      "enabled": true,
+      "name": "Ecobat Freiberg"
+    },
+    {
+      "channels": [
+        {
+          "channel": 21,
+          "channel_name": "Werner-Eckart-Ring 13 | MaLo: 50363441194",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | Emsland Food GmbH | 49661 Cloppenburg",
+          "sheet": "Strom|Emsland|49661"
+        },
+        {
+          "channel": 20,
+          "channel_name": "Emslandstr. 58 | MaLo: 50582161424",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Strom | Emsland-Stärke GmbH | 49824 Emlichheim",
+          "sheet": "Strom|Emsland|49824"
+        },
+        {
+          "channel": 32,
+          "channel_name": "Rudolf-Diesel-Str. 6 | MaLo: 50681450752",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Strom | Emsland-Stärke GmbH | 49824 Emlichheim",
+          "sheet": "Strom|Emsland|49824|32"
+        },
+        {
+          "channel": 19,
+          "channel_name": "Am Bahnhof 3-4 | MaLo: 50076458064",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 4,
+          "meter_name": "Strom | Emsland Aller Aqua GmbH | 15938 Golßen",
+          "sheet": "Strom|Emsland|15938"
+        },
+        {
+          "channel": 14,
+          "channel_name": "Pritzwalker Str. 14 | MaLo: 50484013905",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 5,
+          "meter_name": "Strom | Emsland-Stärke GmbH | 16866 Kyritz",
+          "sheet": "Strom|Emsland|16866"
+        },
+        {
+          "channel": 15,
+          "channel_name": "Drewener Dorfstr. | MaLo: 50482863401",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 5,
+          "meter_name": "Strom | Emsland-Stärke GmbH | 16866 Kyritz",
+          "sheet": "Strom|Emsland|16866|15"
+        },
+        {
+          "channel": 16,
+          "channel_name": "Wittstocker Str. | MaLo: 50482863386",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 5,
+          "meter_name": "Strom | Emsland-Stärke GmbH | 16866 Kyritz",
+          "sheet": "Strom|Emsland|16866|16"
+        },
+        {
+          "channel": 17,
+          "channel_name": "Wittstocker Str. 10 | MaLo: 50482863427",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 5,
+          "meter_name": "Strom | Emsland-Stärke GmbH | 16866 Kyritz",
+          "sheet": "Strom|Emsland|16866|17"
+        },
+        {
+          "channel": 18,
+          "channel_name": "Wittstocker Str. | MaLo: 50482863360",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 5,
+          "meter_name": "Strom | Emsland-Stärke GmbH | 16866 Kyritz",
+          "sheet": "Strom|Emsland|16866|18"
+        },
+        {
+          "channel": 12,
+          "channel_name": "Wunderbüttler Kirchweg 979 | MaLo:51355924685",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 7,
+          "meter_name": "Strom | Emsland Food GmbH | 29378 Wittingen",
+          "sheet": "Strom|Emsland|29378"
+        },
+        {
+          "channel": 13,
+          "channel_name": "Breite Str. 150 | MaLo: 51044571151",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 16,
+          "meter_name": "Strom | Emsland-Stärke GmbH | 29649 Wietzendorf",
+          "sheet": "Strom|Emsland|29649"
+        },
+        {
+          "channel": 26,
+          "channel_name": "Marbostel 500 | MaLo:51041352471",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 16,
+          "meter_name": "Strom | Emsland-Stärke GmbH | 29649 Wietzendorf",
+          "sheet": "Strom|Emsland|29649|26"
+        },
+        {
+          "channel": 29,
+          "channel_name": "Marbostel 500 | MaLo:51044023798",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 16,
+          "meter_name": "Strom | Emsland-Stärke GmbH | 29649 Wietzendorf",
+          "sheet": "Strom|Emsland|29649|29"
+        },
+        {
+          "channel": 10,
+          "channel_name": "Breite Str. | MaLo: 51042462245",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 9,
+          "meter_name": "Gas | Emsland Group | 29649 Wietzendorf",
+          "sheet": "Gas|Emsland|29649"
+        },
+        {
+          "channel": 8,
+          "channel_name": "Pritzwalker Str. 10 | MaLo: 50062223710",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 10,
+          "meter_name": "Gas | Emsland Group | 16866 Kyritz",
+          "sheet": "Gas|Emsland|16866"
+        },
+        {
+          "channel": 9,
+          "channel_name": "Pritzwalker Str. 10 | MaLo: 50062225154",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 10,
+          "meter_name": "Gas | Emsland Group | 16866 Kyritz",
+          "sheet": "Gas|Emsland|16866|9"
+        },
+        {
+          "channel": 5,
+          "channel_name": "Am Bahnhof 3-4 | MaLo: 10263857396",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 11,
+          "meter_name": "Gas | Emsland Group | 15938 Golßen",
+          "sheet": "Gas|Emsland|15938"
+        },
+        {
+          "channel": 6,
+          "channel_name": "Am Bahnhof 3-4 | MaLo: 10263856471",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 11,
+          "meter_name": "Gas | Emsland Group | 15938 Golßen",
+          "sheet": "Gas|Emsland|15938|6"
+        },
+        {
+          "channel": 7,
+          "channel_name": "Am Bahnhof 3-4 | MaLo: 10263857536",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 11,
+          "meter_name": "Gas | Emsland Group | 15938 Golßen",
+          "sheet": "Gas|Emsland|15938|7"
+        },
+        {
+          "channel": 3,
+          "channel_name": "Emslandstr. 58 | MaLo: 10272447097",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 12,
+          "meter_name": "Gas | Emsland Group | 49824 Emlichheim",
+          "sheet": "Gas|Emsland|49824"
+        },
+        {
+          "channel": 2,
+          "channel_name": "Wunderbüttler Kirchweg | MaLo: 51356029921",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 13,
+          "meter_name": "Gas | Emsland Group | 29378 Wittingen",
+          "sheet": "Gas|Emsland|29378"
+        },
+        {
+          "channel": 1,
+          "channel_name": "Werner-Eckart-Ring 13 | MaLo: 50372806173",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 14,
+          "meter_name": "Gas | Emsland Group | 49661 Cloppenburg",
+          "sheet": "Gas|Emsland|49661"
+        },
+        {
+          "channel": 25,
+          "channel_name": "Dr.-Raber-Straße 3 | MaLo: 10181230046",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 15,
+          "meter_name": "Gas | Emsland-Stärke GmbH | 19230 Hagenow",
+          "sheet": "Gas|Emsland|19230"
+        },
+        {
+          "channel": 27,
+          "channel_name": "Am Bahnhof 3-4 | MaLo: 10263900731",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 17,
+          "meter_name": "Gas | Emsland-Stärke GmbH | 15938 Golßen",
+          "sheet": "Gas|Emsland|15938|27"
+        },
+        {
+          "channel": 30,
+          "channel_name": "Am Bahnhof 3-4 | MaLo: 10263891071",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 17,
+          "meter_name": "Gas | Emsland-Stärke GmbH | 15938 Golßen",
+          "sheet": "Gas|Emsland|15938|30"
+        }
+      ],
+      "client": 72,
+      "enabled": true,
+      "name": "Emsland"
+    },
+    {
+      "channels": [
+        {
+          "channel": 2,
+          "channel_name": "Gießereistr. 1 | MaLo: 50091492964",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | Eisenwerk Erla GmbH | 08340 Schwarzenberg",
+          "sheet": "Strom|Erla|08340"
+        },
+        {
+          "channel": 3,
+          "channel_name": "Gießereistr. 1 | MaLo: 50092208063",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | Eisenwerk Erla GmbH | 08340 Schwarzenberg",
+          "sheet": "Strom|Erla|08340|3"
+        },
+        {
+          "channel": 4,
+          "channel_name": "Gießereistr. 1 | MaLo: 50091143228",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | Eisenwerk Erla GmbH | 08340 Schwarzenberg",
+          "sheet": "Strom|Erla|08340|4"
+        }
+      ],
+      "client": 80,
+      "enabled": true,
+      "name": "Erla"
+    },
+    {
+      "channels": [
+        {
+          "channel": 1,
+          "channel_name": "Dr. F.A. Freundt-Straße 3 | MaLo: 50309698155",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | Odenwald Faserplattenwerk GmbH | 63916 Amorbach",
+          "sheet": "Strom|Faserplattenwerk|63916"
+        },
+        {
+          "channel": 2,
+          "channel_name": "Unterer Hammer 2&3 | MaLo: 51189486497",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Strom | Odenwald Faserplattenwerk GmbH | 64720 Michelstadt",
+          "sheet": "Strom|Faserplattenwerk|64720"
+        },
+        {
+          "channel": 3,
+          "channel_name": "Dr. F.A. Freundt-Straße 3 | MaLo: 10094506394",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 4,
+          "meter_name": "Gas | Odenwald Faserplattenwerk GmbH | 63916 Amorbach",
+          "sheet": "Gas|Faserplattenwerk|63916"
+        }
+      ],
+      "client": 56,
+      "enabled": true,
+      "name": "Faserplattenwerk"
+    },
+    {
+      "channels": [
+        {
+          "channel": 3,
+          "channel_name": "Flurstr. 15-17 | MaLo: 50520242723",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | Fondium Metmann GmbH | 40822 Mettmann",
+          "sheet": "Strom|Fondium|40822"
+        },
+        {
+          "channel": 4,
+          "channel_name": "Julius-Bührer-Straße 12 | MaLo: 50680378450",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Strom | Fondium Singen GmbH | 78224 Singen",
+          "sheet": "Strom|Fondium|78224"
+        },
+        {
+          "channel": 5,
+          "channel_name": "Flurstr. 15-17 | MaLo: 10094356624",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 4,
+          "meter_name": "Gas | Fondium Metmann GmbH | 40822 Mettmann",
+          "sheet": "Gas|Fondium|40822"
+        },
+        {
+          "channel": 6,
+          "channel_name": "Julius-Bührer-Straße 12 Ofenmaurer | MaLo: 50920516190",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 5,
+          "meter_name": "Gas | Fondium Singen GmbH | 78224 Singen",
+          "sheet": "Gas|Fondium|78224"
+        },
+        {
+          "channel": 9,
+          "channel_name": "Julius-Bührer-Straße 12 Kesselhaus | MaLo: 50920909923",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 5,
+          "meter_name": "Gas | Fondium Singen GmbH | 78224 Singen",
+          "sheet": "Gas|Fondium|78224|9"
+        },
+        {
+          "channel": 10,
+          "channel_name": "Julius­Bührer­Straße 12 Betrieb | MaLo: 50920910110",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 5,
+          "meter_name": "Gas | Fondium Singen GmbH | 78224 Singen",
+          "sheet": "Gas|Fondium|78224|10"
+        }
+      ],
+      "client": 70,
+      "enabled": true,
+      "name": "Fondium"
+    },
+    {
+      "channels": [
+        {
+          "channel": 1,
+          "channel_name": "Wernher-von-Braun-Straße 20 | MaLo: 51585362358",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | FORUM - PLAST GmbH | 92224 Amberg",
+          "sheet": "Strom|Forum Plast|92224"
+        }
+      ],
+      "client": 65,
+      "enabled": true,
+      "name": "Forum Plast"
+    },
+    {
+      "channels": [
+        {
+          "channel": 2,
+          "channel_name": "Hauptstraße 20 | MaLo: 50578016039",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | Gontermann-Peipers GmbH | 57074 | Siegen",
+          "sheet": "Strom|Gontermann|2"
+        },
+        {
+          "channel": 3,
+          "channel_name": "Kirlestraße 29 | MaLo: 50534466559",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | Gontermann-Peipers GmbH | 57074 | Siegen",
+          "sheet": "Strom|Gontermann|3"
+        },
+        {
+          "channel": 5,
+          "channel_name": "Hauptstraße 20 | MaLo: 50603608024",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Gas | Gontermann-Peipers GmbH | 57074 | Siegen",
+          "sheet": "Gas|Gontermann|5"
+        },
+        {
+          "channel": 6,
+          "channel_name": "Marienborner Str. 56 | MaLo: 50613338398",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Gas | Gontermann-Peipers GmbH | 57074 | Siegen",
+          "sheet": "Gas|Gontermann|6"
+        }
+      ],
+      "client": 81,
+      "enabled": true,
+      "name": "Gontermann"
+    },
+    {
+      "channels": [
+        {
+          "channel": 1,
+          "channel_name": "Parkweg 2 | MaLo: 51470570644",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Strom | Groz-Beckert KG  | 72458 Albstadt",
+          "sheet": "Strom|GrozBeckert|72458"
+        },
+        {
+          "channel": 2,
+          "channel_name": "Sigmaringer Str. 150 | MaLo: 51470470969",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Strom | Groz-Beckert KG  | 72458 Albstadt",
+          "sheet": "Strom|GrozBeckert|72458|2"
+        },
+        {
+          "channel": 3,
+          "channel_name": "Unter dem Malesfelsen 50 | MaLo: 51470335832",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Strom | Groz-Beckert KG  | 72458 Albstadt",
+          "sheet": "Strom|GrozBeckert|72458|3"
+        },
+        {
+          "channel": 4,
+          "channel_name": "Parkweg 2 | MaLo: 51470521829",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 4,
+          "meter_name": "Gas | Groz-Beckert KG  | 72458 Albstadt",
+          "sheet": "Gas|GrozBeckert|72458"
+        },
+        {
+          "channel": 5,
+          "channel_name": "Sigmaringer Str. 150 | MaLo: 51470521663",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 4,
+          "meter_name": "Gas | Groz-Beckert KG  | 72458 Albstadt",
+          "sheet": "Gas|GrozBeckert|72458|5"
+        }
+      ],
+      "client": 82,
+      "enabled": true,
+      "name": "GrozBeckert"
+    },
+    {
+      "channels": [
+        {
+          "channel": 5,
+          "channel_name": "Auf der Welle 5-7 | MaLo: 50579833218",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | Heinrich Meier Eisengießerei GmbH & Co. KG | 32369 Rahden",
+          "sheet": "Strom|HME|32369"
+        },
+        {
+          "channel": 6,
+          "channel_name": "Auf der Welle 5 | MaLo: 50579613131",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | Heinrich Meier Eisengießerei GmbH & Co. KG | 32369 Rahden",
+          "sheet": "Strom|HME|32369|6"
+        },
+        {
+          "channel": 7,
+          "channel_name": "Auf der Welle 3 | MaLo: 50579605550",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | Heinrich Meier Eisengießerei GmbH & Co. KG | 32369 Rahden",
+          "sheet": "Strom|HME|32369|7"
+        },
+        {
+          "channel": 13,
+          "channel_name": "Auf der Welle 5-7 | MaLo: 50515084726",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | Heinrich Meier Eisengießerei GmbH & Co. KG | 32369 Rahden",
+          "sheet": "Strom|HME|32369|13"
+        },
+        {
+          "channel": 8,
+          "channel_name": "Varler Straße 32 | MaLo: 50647838489",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Strom | MeierGuss Sales & Logistics GmbH & Co. KG | 32369 Rahden",
+          "sheet": "Strom|HME|32369|8"
+        },
+        {
+          "channel": 9,
+          "channel_name": "Elzer Straße 23-25 | MaLo: 50970277221",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 4,
+          "meter_name": "Strom | MeierGuss Limburg GmbH & Co. KG | 65556 Limburg",
+          "sheet": "Strom|HME|65556"
+        },
+        {
+          "channel": 10,
+          "channel_name": "Auf der Welle 5-7 | MaLo: 50601507715",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 5,
+          "meter_name": "Gas | Heinrich Meier Eisengießerei GmbH & Co. KG | 32369 Rahden",
+          "sheet": "Gas|HME|32369"
+        },
+        {
+          "channel": 11,
+          "channel_name": "Elzer Straße 23-25 | MaLo: 10094356939",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 6,
+          "meter_name": "Gas | MeierGuss Limburg GmbH & Co. KG | 65556 Limburg",
+          "sheet": "Gas|HME|65556"
+        }
+      ],
+      "client": 74,
+      "enabled": true,
+      "name": "HME"
+    },
+    {
+      "channels": [
+        {
+          "channel": 15,
+          "channel_name": "Breitzbacher Weg 10 | MaLo: 51534527482",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 11,
+          "meter_name": "Strom | BFG-IAR Hünfeld GmbH | 36088 Hünfeld",
+          "sheet": "Strom|Hochwald|36088"
+        },
+        {
+          "channel": 16,
+          "channel_name": "Breitzbacher Weg 10 | MaLo: 51534576918",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 11,
+          "meter_name": "Strom | BFG-IAR Hünfeld GmbH | 36088 Hünfeld",
+          "sheet": "Strom|Hochwald|36088|16"
+        },
+        {
+          "channel": 17,
+          "channel_name": "Breitzbacher Weg 10 | MaLo: xxx",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 11,
+          "meter_name": "Strom | BFG-IAR Hünfeld GmbH | 36088 Hünfeld",
+          "sheet": "Strom|Hochwald|36088|17"
+        },
+        {
+          "channel": 18,
+          "channel_name": "Breitzbacher Weg 10 | MaLo: xxx",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 11,
+          "meter_name": "Strom | BFG-IAR Hünfeld GmbH | 36088 Hünfeld",
+          "sheet": "Strom|Hochwald|36088|18"
+        },
+        {
+          "channel": 19,
+          "channel_name": "Hersfelderstr. 20 | MaLo: 51534538984",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 11,
+          "meter_name": "Strom | BFG-IAR Hünfeld GmbH | 36088 Hünfeld",
+          "sheet": "Strom|Hochwald|36088|19"
+        },
+        {
+          "channel": 20,
+          "channel_name": "Mohastr. 1 | MaLo: 50797352587",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 12,
+          "meter_name": "Strom | Hochwald Foods GmbH | 35410 Hungen",
+          "sheet": "Strom|Hochwald|35410"
+        },
+        {
+          "channel": 21,
+          "channel_name": "Denisstr. 19 | MaLo: 51588226824",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 13,
+          "meter_name": "Strom | Hochwald Foods GmbH | 67663 Kaiserslautern",
+          "sheet": "Strom|Hochwald|67663"
+        },
+        {
+          "channel": 22,
+          "channel_name": "Lüner Weg 2-13 | MaLo: 50428050377",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 14,
+          "meter_name": "Strom | Hochwald Foods GmbH | 21337 Lüneburg",
+          "sheet": "Strom|Hochwald|21337"
+        },
+        {
+          "channel": 23,
+          "channel_name": "Gebr.-Heyn-Str. 10 | MaLo: 50425727200",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 14,
+          "meter_name": "Strom | Hochwald Foods GmbH | 21337 Lüneburg",
+          "sheet": "Strom|Hochwald|21337|23"
+        },
+        {
+          "channel": 24,
+          "channel_name": "Bahnhofstr. 37-43 | MaLo: 50556616273",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 15,
+          "meter_name": "Strom | Hochwald Foods GmbH | 54424 Thalfang",
+          "sheet": "Strom|Hochwald|54424"
+        },
+        {
+          "channel": 25,
+          "channel_name": "An der L 152 | MaLo: 50564793782",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 15,
+          "meter_name": "Strom | Hochwald Foods GmbH | 54424 Thalfang",
+          "sheet": "Strom|Hochwald|54424|25"
+        },
+        {
+          "channel": 26,
+          "channel_name": "Justus-Liebig-Str. 1 | MaLo: 51534575332",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 16,
+          "meter_name": "Strom | Hochwald Foods Whey Ingredients GmbH  | 36088 Hünfeld",
+          "sheet": "Strom|Hochwald|36088|26"
+        },
+        {
+          "channel": 27,
+          "channel_name": "Justus-Liebig-Str. 1 | MaLo: 51534576794",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 16,
+          "meter_name": "Strom | Hochwald Foods Whey Ingredients GmbH  | 36088 Hünfeld",
+          "sheet": "Strom|Hochwald|36088|27"
+        },
+        {
+          "channel": 28,
+          "channel_name": "Justus-Liebig-Str. 1 | MaLo: xxx",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 16,
+          "meter_name": "Strom | Hochwald Foods Whey Ingredients GmbH  | 36088 Hünfeld",
+          "sheet": "Strom|Hochwald|36088|28"
+        },
+        {
+          "channel": 29,
+          "channel_name": "Justus-Liebig-Str. 1 | MaLo: xxx",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 16,
+          "meter_name": "Strom | Hochwald Foods Whey Ingredients GmbH  | 36088 Hünfeld",
+          "sheet": "Strom|Hochwald|36088|29"
+        },
+        {
+          "channel": 30,
+          "channel_name": "Ziegelfeld 16 | MaLo: 50637063343",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 17,
+          "meter_name": "Strom | Hochwald Foods Whey Ingredients GmbH  | 53894 Mechernich",
+          "sheet": "Strom|Hochwald|53894"
+        },
+        {
+          "channel": 31,
+          "channel_name": "Ziegelfeld 16 | MaLo: 50637063351",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 17,
+          "meter_name": "Strom | Hochwald Foods Whey Ingredients GmbH  | 53894 Mechernich",
+          "sheet": "Strom|Hochwald|53894|31"
+        },
+        {
+          "channel": 32,
+          "channel_name": "Ziegelfeld 16 | MaLo: xxx",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 17,
+          "meter_name": "Strom | Hochwald Foods Whey Ingredients GmbH  | 53894 Mechernich",
+          "sheet": "Strom|Hochwald|53894|32"
+        },
+        {
+          "channel": 33,
+          "channel_name": "Georgstr. 20Z | MaLo: 50643405373",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 18,
+          "meter_name": "Strom | Hochwald Foods Whey Ingredients GmbH  | 53879 Euskirchen",
+          "sheet": "Strom|Hochwald|53879"
+        },
+        {
+          "channel": 2,
+          "channel_name": "Bahnhofstraße 37-43 | MaLo: 10223012790",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Gas | Hochwald Foods GmbH | 54424 Thalfang",
+          "sheet": "Gas|Hochwald|54424"
+        },
+        {
+          "channel": 3,
+          "channel_name": "Bahnhofstraße 37-43 | MaLo: 10223012211",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Gas | Hochwald Foods GmbH | 54424 Thalfang",
+          "sheet": "Gas|Hochwald|54424|3"
+        },
+        {
+          "channel": 4,
+          "channel_name": "Mohastraße 1 | MaLo: 10096764776",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Gas | Hochwald Foods GmbH | 35410 Hungen",
+          "sheet": "Gas|Hochwald|35410"
+        },
+        {
+          "channel": 5,
+          "channel_name": "Denisstraße 19 | MaLo: 10270147425",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 4,
+          "meter_name": "Gas | Hochwald Foods GmbH | 67663 Kaiserslautern",
+          "sheet": "Gas|Hochwald|67663"
+        },
+        {
+          "channel": 6,
+          "channel_name": "Ziegelfeld 16 | MaLo: 10217654029",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 5,
+          "meter_name": "Gas | Hochwald Foods Whey Ingredients GmbH | 53894 Mechernich",
+          "sheet": "Gas|Hochwald|53894"
+        },
+        {
+          "channel": 7,
+          "channel_name": "Lüner Weg 2-15a | MaLo: 50422657757",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 6,
+          "meter_name": "Gas | Hochwald Foods GmbH | 21337 Lüneburg",
+          "sheet": "Gas|Hochwald|21337"
+        },
+        {
+          "channel": 8,
+          "channel_name": "Lüner Weg 2-15a | MaLo: 50422596286",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 6,
+          "meter_name": "Gas | Hochwald Foods GmbH | 21337 Lüneburg",
+          "sheet": "Gas|Hochwald|21337|8"
+        },
+        {
+          "channel": 9,
+          "channel_name": "Lüner Weg 2-15a | MaLo: 50422369211",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 6,
+          "meter_name": "Gas | Hochwald Foods GmbH | 21337 Lüneburg",
+          "sheet": "Gas|Hochwald|21337|9"
+        },
+        {
+          "channel": 11,
+          "channel_name": "Justus-Liebig-Straße 1 | MaLo: 51534439512",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 8,
+          "meter_name": "Gas | Hochwald Foods Whey Ingredients GmbH | 36088 Hünfeld",
+          "sheet": "Gas|Hochwald|36088"
+        },
+        {
+          "channel": 12,
+          "channel_name": "Breitzbacher Weg 10 | MaLo: 51534452100",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 9,
+          "meter_name": "Gas | BFG-IAR Hünfeld GmbH | 36088 Hünfeld",
+          "sheet": "Gas|Hochwald|36088|12"
+        },
+        {
+          "channel": 13,
+          "channel_name": "Menningerstraße 1 | MaLo: 10153448213",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 10,
+          "meter_name": "Gas | Almil AG | 84570 Polling",
+          "sheet": "Gas|Hochwald|84570"
+        },
+        {
+          "channel": 14,
+          "channel_name": "Hersfelder Straße 20 | MaLo: 51534452093",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 10,
+          "meter_name": "Gas | Almil AG | 84570 Polling",
+          "sheet": "Gas|Hochwald|84570|14"
+        }
+      ],
+      "client": 75,
+      "enabled": true,
+      "name": "Hochwald"
+    },
+    {
+      "channels": [
+        {
+          "channel": 2,
+          "channel_name": "Moorburger Str. 16 | MaLo: 50844782116",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | HOLBORN Europa Raffinerie GmbH | 21079 Hamburg",
+          "sheet": "Strom|Holborn|21079"
+        },
+        {
+          "channel": 3,
+          "channel_name": "Moorburger Str. 16 | MaLo: 50835363701",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | HOLBORN Europa Raffinerie GmbH | 21079 Hamburg",
+          "sheet": "Strom|Holborn|21079|3"
+        },
+        {
+          "channel": 4,
+          "channel_name": "Moorburger Str. 16 | MaLo: 50832676545",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | HOLBORN Europa Raffinerie GmbH | 21079 Hamburg",
+          "sheet": "Strom|Holborn|21079|4"
+        },
+        {
+          "channel": 1,
+          "channel_name": "Moorburger Str. 16 | MaLo: 50439535037",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Gas | HOLBORN Europa Raffinerie GmbH | 21079 Hamburg",
+          "sheet": "Gas|Holborn|21079"
+        }
+      ],
+      "client": 64,
+      "enabled": true,
+      "name": "Holborn"
+    },
+    {
+      "channels": [
+        {
+          "channel": 160,
+          "channel_name": "FRA28 Lyoner Str. | MaLo: 50668463257",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 46,
+          "meter_name": "Strom | Digital Realty Germany GmbH | Abrechnungsrelevante Zählpunkte",
+          "sheet": "Strom|Interxion|160"
+        },
+        {
+          "channel": 161,
+          "channel_name": "Wilhelm Fay Str ZP 995 | MaLo: 50282015559",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 46,
+          "meter_name": "Strom | Digital Realty Germany GmbH | Abrechnungsrelevante Zählpunkte",
+          "sheet": "Strom|Interxion|161"
+        },
+        {
+          "channel": 162,
+          "channel_name": "Wilhelm Fay Str ZP 996 | MaLo: 50282015559",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 46,
+          "meter_name": "Strom | Digital Realty Germany GmbH | Abrechnungsrelevante Zählpunkte",
+          "sheet": "Strom|Interxion|162"
+        },
+        {
+          "channel": 163,
+          "channel_name": "DUS (DUS1 - 3) | MaLo: 51240790828",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 46,
+          "meter_name": "Strom | Digital Realty Germany GmbH | Abrechnungsrelevante Zählpunkte",
+          "sheet": "Strom|Interxion|163"
+        },
+        {
+          "channel": 164,
+          "channel_name": "FRA1 | MaLo: 50668283382",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 46,
+          "meter_name": "Strom | Digital Realty Germany GmbH | Abrechnungsrelevante Zählpunkte",
+          "sheet": "Strom|Interxion|164"
+        },
+        {
+          "channel": 165,
+          "channel_name": "FRA2 | MaLo: 50668280817",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 46,
+          "meter_name": "Strom | Digital Realty Germany GmbH | Abrechnungsrelevante Zählpunkte",
+          "sheet": "Strom|Interxion|165"
+        },
+        {
+          "channel": 166,
+          "channel_name": "FRA3 | MaLo: 50668281964",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 46,
+          "meter_name": "Strom | Digital Realty Germany GmbH | Abrechnungsrelevante Zählpunkte",
+          "sheet": "Strom|Interxion|166"
+        },
+        {
+          "channel": 167,
+          "channel_name": "FRA5 | MaLo: 50668287144",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 46,
+          "meter_name": "Strom | Digital Realty Germany GmbH | Abrechnungsrelevante Zählpunkte",
+          "sheet": "Strom|Interxion|167"
+        },
+        {
+          "channel": 168,
+          "channel_name": "Kopfstation (FRA4, FRA6, FRA7, FRA8) | MaLo: 50668463413",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 46,
+          "meter_name": "Strom | Digital Realty Germany GmbH | Abrechnungsrelevante Zählpunkte",
+          "sheet": "Strom|Interxion|168"
+        },
+        {
+          "channel": 169,
+          "channel_name": "UW46 (FRA10 - FRA16) | MaLo: 50668463380",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 46,
+          "meter_name": "Strom | Digital Realty Germany GmbH | Abrechnungsrelevante Zählpunkte",
+          "sheet": "Strom|Interxion|169"
+        },
+        {
+          "channel": 190,
+          "channel_name": "TUA03 | MaLo: 50670159802",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 46,
+          "meter_name": "Strom | Digital Realty Germany GmbH | Abrechnungsrelevante Zählpunkte",
+          "sheet": "Strom|Interxion|190"
+        },
+        {
+          "channel": 194,
+          "channel_name": "Weismüllerstr. 25 EG | MaLo: 50668257684",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 46,
+          "meter_name": "Strom | Digital Realty Germany GmbH | Abrechnungsrelevante Zählpunkte",
+          "sheet": "Strom|Interxion|194"
+        },
+        {
+          "channel": 195,
+          "channel_name": "Temp. Vers. Hattersheim | MaLo: 50282857406",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 46,
+          "meter_name": "Strom | Digital Realty Germany GmbH | Abrechnungsrelevante Zählpunkte",
+          "sheet": "Strom|Interxion|195"
+        },
+        {
+          "channel": 196,
+          "channel_name": "Sossenheim | MaLo: 50282015559",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 46,
+          "meter_name": "Strom | Digital Realty Germany GmbH | Abrechnungsrelevante Zählpunkte",
+          "sheet": "Strom|Interxion|196"
+        },
+        {
+          "channel": 200,
+          "channel_name": "UW03 NRM (FRA17-18, 27) | MaLo: 50670218187",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 46,
+          "meter_name": "Strom | Digital Realty Germany GmbH | Abrechnungsrelevante Zählpunkte",
+          "sheet": "Strom|Interxion|200"
+        },
+        {
+          "channel": 202,
+          "channel_name": "FRA33 B1 Hauptzählung | MaLo: 50283403266 | gepoolt",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 46,
+          "meter_name": "Strom | Digital Realty Germany GmbH | Abrechnungsrelevante Zählpunkte",
+          "sheet": "Strom|Interxion|202"
+        },
+        {
+          "channel": 203,
+          "channel_name": "FRA33 B1 Vergleichszählung Hattersheim  | MaLo: 50283403555",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 46,
+          "meter_name": "Strom | Digital Realty Germany GmbH | Abrechnungsrelevante Zählpunkte",
+          "sheet": "Strom|Interxion|203"
+        },
+        {
+          "channel": 204,
+          "channel_name": "FRA33 A1 Hauptzählung Hattersheim  | MaLo: 50283403141",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 46,
+          "meter_name": "Strom | Digital Realty Germany GmbH | Abrechnungsrelevante Zählpunkte",
+          "sheet": "Strom|Interxion|204"
+        },
+        {
+          "channel": 205,
+          "channel_name": "FRA33 A1 Vergleichszählung Hattersheim  | MaLo: 50283402507",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 46,
+          "meter_name": "Strom | Digital Realty Germany GmbH | Abrechnungsrelevante Zählpunkte",
+          "sheet": "Strom|Interxion|205"
+        },
+        {
+          "channel": 206,
+          "channel_name": "Baustrom FRA33 | MaLo: 50280360625",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 46,
+          "meter_name": "Strom | Digital Realty Germany GmbH | Abrechnungsrelevante Zählpunkte",
+          "sheet": "Strom|Interxion|206"
+        },
+        {
+          "channel": 221,
+          "channel_name": "UW03 Avacon (FRA17-18, 27) | MaLo: 50670218187",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 46,
+          "meter_name": "Strom | Digital Realty Germany GmbH | Abrechnungsrelevante Zählpunkte",
+          "sheet": "Strom|Interxion|221"
+        },
+        {
+          "channel": 170,
+          "channel_name": "Lyoner Straße Virt. ZP (AbZP) | MaLo: 50668463257 | MeLo: DE0001936052800000000000000680495",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 47,
+          "meter_name": "Strom | Digital Realty Germany GmbH | 60528 Frankfurt DLR",
+          "sheet": "Strom|Interxion|60528"
+        },
+        {
+          "channel": 197,
+          "channel_name": "Wilhelm Fay Str ZP 24 | MaLo: 50282015559 | MeLo: Virtuell",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 47,
+          "meter_name": "Strom | Digital Realty Germany GmbH | 60528 Frankfurt DLR",
+          "sheet": "Strom|Interxion|60528|197"
+        },
+        {
+          "channel": 173,
+          "channel_name": "DUS 1 T3471 | MaLo: 51240790828 | MeLo: DE00731940599CONNECTAPARC0000TUE1",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 48,
+          "meter_name": "Strom | Digital Realty Germany GmbH | 40599 Düsseldorf",
+          "sheet": "Strom|Interxion|40599"
+        },
+        {
+          "channel": 174,
+          "channel_name": "DUS 1 T4490 | MaLo: 51240790828 | MeLo: DE00731940599CONNECTAPARC0000TUE2",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 48,
+          "meter_name": "Strom | Digital Realty Germany GmbH | 40599 Düsseldorf",
+          "sheet": "Strom|Interxion|40599|174"
+        },
+        {
+          "channel": 175,
+          "channel_name": "DUS 2 | MaLo: 51240790828 | MeLo: DE00731940599CONNECTAPARC0000TUE3",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 48,
+          "meter_name": "Strom | Digital Realty Germany GmbH | 40599 Düsseldorf",
+          "sheet": "Strom|Interxion|40599|175"
+        },
+        {
+          "channel": 176,
+          "channel_name": "DUS Virt. ZP (AbZP) | MaLo: 51240790828 | MeLo: DE00731940599CONNECTAPARC00TUEVZR",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 48,
+          "meter_name": "Strom | Digital Realty Germany GmbH | 40599 Düsseldorf",
+          "sheet": "Strom|Interxion|40599|176"
+        },
+        {
+          "channel": 177,
+          "channel_name": "FRA 1 (AbZP) | MaLo: 50668283382 | MeLo: DE0073766031400000000000000845688",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 49,
+          "meter_name": "Strom | Digital Realty Germany GmbH | 60314 Frankfurt",
+          "sheet": "Strom|Interxion|60314"
+        },
+        {
+          "channel": 178,
+          "channel_name": "FRA 2 (AbZP) | MaLo: 50668280817 | MeLo: DE0001936031400000000000000827878",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 49,
+          "meter_name": "Strom | Digital Realty Germany GmbH | 60314 Frankfurt",
+          "sheet": "Strom|Interxion|60314|178"
+        },
+        {
+          "channel": 179,
+          "channel_name": "FRA 3 (AbZP) | MaLo: 50668281964 | MeLo: DE0001936031400000000000000827891",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 49,
+          "meter_name": "Strom | Digital Realty Germany GmbH | 60314 Frankfurt",
+          "sheet": "Strom|Interxion|60314|179"
+        },
+        {
+          "channel": 180,
+          "channel_name": "FRA 5 (AbZP) | MaLo: 50668287144 | MeLo: DE0073766031400000000000000865673",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 49,
+          "meter_name": "Strom | Digital Realty Germany GmbH | 60314 Frankfurt",
+          "sheet": "Strom|Interxion|60314|180"
+        },
+        {
+          "channel": 198,
+          "channel_name": "Weismüllerstr. 25 EG | MaLo: 50668257684 | MeLo: DE0001936031400000000000000338257",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 49,
+          "meter_name": "Strom | Digital Realty Germany GmbH | 60314 Frankfurt",
+          "sheet": "Strom|Interxion|60314|198"
+        },
+        {
+          "channel": 181,
+          "channel_name": "FRA 4 | MaLo: 50668463413 | MeLo: DE0073766031400000000000000907893",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 50,
+          "meter_name": "Strom | Digital Realty Germany GmbH | 60314 Frankfurt Kopfstation",
+          "sheet": "Strom|Interxion|60314|181"
+        },
+        {
+          "channel": 182,
+          "channel_name": "FRA 6 | MaLo: 50668463413 | MeLo: DE0073766031400000000000000907892",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 50,
+          "meter_name": "Strom | Digital Realty Germany GmbH | 60314 Frankfurt Kopfstation",
+          "sheet": "Strom|Interxion|60314|182"
+        },
+        {
+          "channel": 183,
+          "channel_name": "FRA 7 | MaLo: 50668463413 | MeLo: DE0073766031400000000000000925064",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 50,
+          "meter_name": "Strom | Digital Realty Germany GmbH | 60314 Frankfurt Kopfstation",
+          "sheet": "Strom|Interxion|60314|183"
+        },
+        {
+          "channel": 184,
+          "channel_name": "FRA 8 | MaLo: 50668463413 | MeLo: DE0073766031400000000000000943180",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 50,
+          "meter_name": "Strom | Digital Realty Germany GmbH | 60314 Frankfurt Kopfstation",
+          "sheet": "Strom|Interxion|60314|184"
+        },
+        {
+          "channel": 185,
+          "channel_name": "FRA Kopfstation (fra 4 ,6, 7, 8 )(AbZP) | MaLo: 50668463413 | MeLo: DE0073766031400000000000000944151",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 50,
+          "meter_name": "Strom | Digital Realty Germany GmbH | 60314 Frankfurt Kopfstation",
+          "sheet": "Strom|Interxion|60314|185"
+        },
+        {
+          "channel": 188,
+          "channel_name": "UW 46 Gesamt (AbZP)  | MaLo: 50668463380 | MeLo: DE0050668463380000000000001234567",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 51,
+          "meter_name": "Strom | Digital Realty Germany GmbH | 60314 Frankfurt UW 46",
+          "sheet": "Strom|Interxion|60314|188"
+        },
+        {
+          "channel": 191,
+          "channel_name": "Temporäre Versorgung FRA17 | MaLo: 50670159802 | MeLo: DE0073766038600000000000001020062",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 52,
+          "meter_name": "Strom | Digital Realty Germany GmbH | 60386 Frankfurt FRA 17",
+          "sheet": "Strom|Interxion|60386"
+        },
+        {
+          "channel": 209,
+          "channel_name": "FRA33 B1 Vergleichszählung | MaLo: 50283403555 | MeLo: DE0010646579500000000000000343689",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 54,
+          "meter_name": "Strom | Digital Realty Germany GmbH | 65795 Frankfurt am Main",
+          "sheet": "Strom|Interxion|65795"
+        },
+        {
+          "channel": 210,
+          "channel_name": "FRA33 A1 Hauptzählung | MaLo: 50283403141 | MeLo: DE0010646579500000000000000343734",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 54,
+          "meter_name": "Strom | Digital Realty Germany GmbH | 65795 Frankfurt am Main",
+          "sheet": "Strom|Interxion|65795|210"
+        },
+        {
+          "channel": 211,
+          "channel_name": "FRA33 A1 Vergleichszählung | MaLo: 50283402507 | MeLo: DE0010646579500000000000000343700",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 54,
+          "meter_name": "Strom | Digital Realty Germany GmbH | 65795 Frankfurt am Main",
+          "sheet": "Strom|Interxion|65795|211"
+        },
+        {
+          "channel": 212,
+          "channel_name": "FRA33 B1 Hauptzählung | MaLo: 50283403266 | MeLo: DE0010646579500000000000000343728",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 54,
+          "meter_name": "Strom | Digital Realty Germany GmbH | 65795 Frankfurt am Main",
+          "sheet": "Strom|Interxion|65795|212"
+        },
+        {
+          "channel": 213,
+          "channel_name": "FRA14 | MaLo: 50668463380 | interne Messung",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 56,
+          "meter_name": "Strom | Digital Realty Germany GmbH | interne Messungen",
+          "sheet": "Strom|Interxion|213"
+        },
+        {
+          "channel": 214,
+          "channel_name": "FRA13 | MaLo: 50668463380 | interne Messung",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 56,
+          "meter_name": "Strom | Digital Realty Germany GmbH | interne Messungen",
+          "sheet": "Strom|Interxion|214"
+        },
+        {
+          "channel": 215,
+          "channel_name": "FRA11 | MaLo: 50668463380 | interne Messung",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 56,
+          "meter_name": "Strom | Digital Realty Germany GmbH | interne Messungen",
+          "sheet": "Strom|Interxion|215"
+        },
+        {
+          "channel": 216,
+          "channel_name": "FRA10 + FRA12 | MaLo: 50668463380 | interne Messung",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 56,
+          "meter_name": "Strom | Digital Realty Germany GmbH | interne Messungen",
+          "sheet": "Strom|Interxion|216"
+        },
+        {
+          "channel": 217,
+          "channel_name": "UW91 K09 + K10 | MaLo: 50668463380 | interne Messung",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 56,
+          "meter_name": "Strom | Digital Realty Germany GmbH | interne Messungen",
+          "sheet": "Strom|Interxion|217"
+        },
+        {
+          "channel": 218,
+          "channel_name": "UW91 K07 | MaLo: 50668463380 | interne Messung",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 56,
+          "meter_name": "Strom | Digital Realty Germany GmbH | interne Messungen",
+          "sheet": "Strom|Interxion|218"
+        },
+        {
+          "channel": 1221,
+          "channel_name": "UW03 (FRA1718, 27) | MaLo: 50670218187 | interne Messung",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 56,
+          "meter_name": "Strom | Digital Realty Germany GmbH | interne Messungen",
+          "sheet": "Strom|Interxion|1221"
+        }
+      ],
+      "client": 31,
+      "enabled": true,
+      "name": "Interxion"
+    },
+    {
+      "channels": [
+        {
+          "channel": 2,
+          "channel_name": "Kitzingstr. 15 | Malo: 50707075343",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | IPB Internet Provider in Berlin GmbH  | 12277 Berlin",
+          "sheet": "Strom|IPB|12277"
+        },
+        {
+          "channel": 3,
+          "channel_name": "Kitzingstr. 15| Malo: 50707086374",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | IPB Internet Provider in Berlin GmbH  | 12277 Berlin",
+          "sheet": "Strom|IPB|12277|3"
+        },
+        {
+          "channel": 4,
+          "channel_name": "Lützowstr. 105 | Malo: 50729428835",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Strom | IPB Internet Provider in Berlin GmbH  | 10785 Berlin",
+          "sheet": "Strom|IPB|10785"
+        },
+        {
+          "channel": 5,
+          "channel_name": "Lützowstr. 105 | Malo: 50733518094",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Strom | IPB Internet Provider in Berlin GmbH  | 10785 Berlin",
+          "sheet": "Strom|IPB|10785|5"
+        }
+      ],
+      "client": 88,
+      "enabled": true,
+      "name": "IPB"
+    },
+    {
+      "channels": [
+        {
+          "channel": 1,
+          "channel_name": "Hauptabnahmestelle Firmierung: KBMT GmbH & Co. KG | MaLo: 50635360246",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | KBMT GmbH & Co. KG | 54311 Trierweiler",
+          "sheet": "Strom|KBMT|54311"
+        },
+        {
+          "channel": 2,
+          "channel_name": "Firmierung: KBMT GmbH & Co. KG | MaLo: 50552023422",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | KBMT GmbH & Co. KG | 54311 Trierweiler",
+          "sheet": "Strom|KBMT|54311|2"
+        },
+        {
+          "channel": 3,
+          "channel_name": "Firmierung: Borne Logistik und Speditionsgesellschaft mbH | MaLo: 50516962773",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | KBMT GmbH & Co. KG | 54311 Trierweiler",
+          "sheet": "Strom|KBMT|54311|3"
+        },
+        {
+          "channel": 4,
+          "channel_name": "Firmierung: Borne Energy GmbH | MaLo: 50641071770",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | KBMT GmbH & Co. KG | 54311 Trierweiler",
+          "sheet": "Strom|KBMT|54311|4"
+        },
+        {
+          "channel": 5,
+          "channel_name": "Firmierung: KBMT GmbH & Co. KG | MaLo: 50575188716",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | KBMT GmbH & Co. KG | 54311 Trierweiler",
+          "sheet": "Strom|KBMT|54311|5"
+        }
+      ],
+      "client": 59,
+      "enabled": true,
+      "name": "KBMT"
+    },
+    {
+      "channels": [
+        {
+          "channel": 1,
+          "channel_name": "Goethering 29 | MaLo: 50995959820",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | maincubes Holding & Service GmbH | 63067 Offenbach",
+          "sheet": "Strom|maincubes|63067"
+        },
+        {
+          "channel": 3,
+          "channel_name": "Am Kronberger Hang 2b | MaLo: 50283095807",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Strom | maincubes Holding & Service GmbH | 65824 Schwalbach am Taunus",
+          "sheet": "Strom|maincubes|65824"
+        },
+        {
+          "channel": 6,
+          "channel_name": "Am Kronberger Hang 6 | MaLo: 50283623054",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Strom | maincubes Holding & Service GmbH | 65824 Schwalbach am Taunus",
+          "sheet": "Strom|maincubes|65824|6"
+        },
+        {
+          "channel": 14,
+          "channel_name": "Am Kronberger Hang 6 | MaLo: 50283756491",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Strom | maincubes Holding & Service GmbH | 65824 Schwalbach am Taunus",
+          "sheet": "Strom|maincubes|65824|14"
+        },
+        {
+          "channel": 4,
+          "channel_name": "Assar-Gabrielson-Straße 11 | MaLo: 50995755137",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 4,
+          "meter_name": "Strom | maincubes Holding & Service GmbH | 63128 Dietzenbach",
+          "sheet": "Strom|maincubes|63128"
+        },
+        {
+          "channel": 5,
+          "channel_name": "Assar-Gabrielson-Straße 11-13 | MaLo: 50994278130",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 4,
+          "meter_name": "Strom | maincubes Holding & Service GmbH | 63128 Dietzenbach",
+          "sheet": "Strom|maincubes|63128|5"
+        },
+        {
+          "channel": 7,
+          "channel_name": "Forckenbeckstr. 86 | MaLo: 50732712499",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 5,
+          "meter_name": "Strom | maincubes Holding & Service GmbH | 14199 Berlin",
+          "sheet": "Strom|maincubes|14199"
+        },
+        {
+          "channel": 8,
+          "channel_name": "Auf dem Mittelberge | MaLo: 50863711724",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 6,
+          "meter_name": "Strom | maincubes Holding & Service GmbH | 37133 Friedland Deiderode",
+          "sheet": "Strom|maincubes|37133"
+        },
+        {
+          "channel": 9,
+          "channel_name": "Im Rinschenrott | MaLo: 50863711691",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 7,
+          "meter_name": "Strom | maincubes Holding & Service GmbH | 37079 Göttingen",
+          "sheet": "Strom|maincubes|37079"
+        },
+        {
+          "channel": 10,
+          "channel_name": "Holtenser Str. | MaLo: 50863711576",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 8,
+          "meter_name": "Strom | maincubes Holding & Service GmbH | 37120 Bovenden Lenglern",
+          "sheet": "Strom|maincubes|37120"
+        },
+        {
+          "channel": 15,
+          "channel_name": "Berliner Straße 80 Z | MaLo: 51871159360",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 12,
+          "meter_name": "Strom | maincubes Holding & Service GmbH | 14641 Nauen",
+          "sheet": "Strom|maincubes|14641"
+        }
+      ],
+      "client": 63,
+      "enabled": true,
+      "name": "maincubes"
+    },
+    {
+      "channels": [
+        {
+          "channel": 25,
+          "channel_name": "Werk 1-3 | MaLo: 50568884537",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 5,
+          "meter_name": "Strom | Montaplast GmbH | 51597 Morsbach",
+          "sheet": "Strom|Montaplast|51597"
+        },
+        {
+          "channel": 24,
+          "channel_name": "Werk 1-2 | MaLo: 50213253178",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 6,
+          "meter_name": "Gas | Montaplast GmbH | 51597 Morsbach",
+          "sheet": "Gas|Montaplast|51597"
+        },
+        {
+          "channel": 23,
+          "channel_name": "Werk 3 | MaLo: 50214729219",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 7,
+          "meter_name": "Gas | Montaplast GmbH | 51597 Lichtenberg",
+          "sheet": "Gas|Montaplast|51597|23"
+        }
+      ],
+      "client": 18,
+      "enabled": true,
+      "name": "Montaplast"
+    },
+    {
+      "channels": [
+        {
+          "channel": 47,
+          "channel_name": "Derschlager Str. 26 | MaLo: 50933023869",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 31,
+          "meter_name": "Strom | OTTO FUCHS KG | 58540 Meinerzhagen",
+          "sheet": "Strom|Otto Fuchs|58540"
+        },
+        {
+          "channel": 48,
+          "channel_name": "Im Kötgen 1 | MaLo: 50933023877",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 31,
+          "meter_name": "Strom | OTTO FUCHS KG | 58540 Meinerzhagen",
+          "sheet": "Strom|Otto Fuchs|58540|48"
+        },
+        {
+          "channel": 49,
+          "channel_name": "Willertshagener Str. 2 | MaLo: 50933016533",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 31,
+          "meter_name": "Strom | OTTO FUCHS KG | 58540 Meinerzhagen",
+          "sheet": "Strom|Otto Fuchs|58540|49"
+        },
+        {
+          "channel": 50,
+          "channel_name": "Willertshagener Str. 3 | MaLo: 50933016541",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 31,
+          "meter_name": "Strom | OTTO FUCHS KG | 58540 Meinerzhagen",
+          "sheet": "Strom|Otto Fuchs|58540|50"
+        },
+        {
+          "channel": 51,
+          "channel_name": "Heiligenstr. 70 | MaLo: 50175565637",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 32,
+          "meter_name": "Strom | OTTO FUCHS Dülken GmbH & Co. KG | 41751 Viersen",
+          "sheet": "Strom|Otto Fuchs|41751"
+        },
+        {
+          "channel": 52,
+          "channel_name": "Grünewald 10 | MaLo: 50935940558",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 33,
+          "meter_name": "Strom | OTTO FUCHS Surface Technology GmbH & Co. KG | 58540 Meinerzhagen",
+          "sheet": "Strom|Otto Fuchs|58540|52"
+        },
+        {
+          "channel": 28,
+          "channel_name": "Gesamt",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 10,
+          "meter_name": "Gas_OTTO FUCHS KG",
+          "sheet": "Gas|Otto Fuchs|28"
+        },
+        {
+          "channel": 54,
+          "channel_name": "Weststr. 18 | MaLo: 50612708526",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 34,
+          "meter_name": "Gas | OTTO FUCHS KG | 58540 Meinerzhagen",
+          "sheet": "Gas|Otto Fuchs|58540"
+        },
+        {
+          "channel": 55,
+          "channel_name": "virtuell Derschl. Str. & Höhenstr. | MaLo: 50613601745",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 34,
+          "meter_name": "Gas | OTTO FUCHS KG | 58540 Meinerzhagen",
+          "sheet": "Gas|Otto Fuchs|58540|55"
+        },
+        {
+          "channel": 58,
+          "channel_name": "Grünewald 10 | MaLo: 50618315515",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 35,
+          "meter_name": "Gas | OTTO FUCHS Surface Technology GmbH & Co. KG | 58540 Meinerzhagen",
+          "sheet": "Gas|Otto Fuchs|58540|58"
+        },
+        {
+          "channel": 56,
+          "channel_name": "Viersen Fuchs am Bahnhof | MaLo: 10088155503",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 36,
+          "meter_name": "Gas | OTTO FUCHS Dülken GmbH & Co. KG | 41751 Viersen",
+          "sheet": "Gas|Otto Fuchs|41751"
+        },
+        {
+          "channel": 57,
+          "channel_name": "Kampweg 7 | MaLo: 10013759057",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 36,
+          "meter_name": "Gas | OTTO FUCHS Dülken GmbH & Co. KG | 41751 Viersen",
+          "sheet": "Gas|Otto Fuchs|41751|57"
+        }
+      ],
+      "client": 3,
+      "enabled": true,
+      "name": "Otto Fuchs"
+    },
+    {
+      "channels": [
+        {
+          "channel": 2,
+          "channel_name": "Hermann-Muth-Straße 6 | MaLo: 50166490851",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | Papierfabrik Adolf Jass GmbH & Co. KG | 36039 Fulda",
+          "sheet": "Strom|Papierfabrik|36039"
+        },
+        {
+          "channel": 3,
+          "channel_name": "Breitscheidstraße 143 | MaLo: 51156530722",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Strom | Papierfabrik Adolf Jass GmbH & Co. KG | 07407 Rudolstadt",
+          "sheet": "Strom|Papierfabrik|07407"
+        },
+        {
+          "channel": 4,
+          "channel_name": "Breitscheidstraße 143 | MaLo: 51281984381",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Strom | Papierfabrik Adolf Jass GmbH & Co. KG | 07407 Rudolstadt",
+          "sheet": "Strom|Papierfabrik|07407|4"
+        },
+        {
+          "channel": 5,
+          "channel_name": "Breitscheidstraße 143 | MaLo: 51282007174",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Strom | Papierfabrik Adolf Jass GmbH & Co. KG | 07407 Rudolstadt",
+          "sheet": "Strom|Papierfabrik|07407|5"
+        },
+        {
+          "channel": 6,
+          "channel_name": "Breitscheidstraße 143 | MaLo: 51282001782",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Strom | Papierfabrik Adolf Jass GmbH & Co. KG | 07407 Rudolstadt",
+          "sheet": "Strom|Papierfabrik|07407|6"
+        },
+        {
+          "channel": 8,
+          "channel_name": "Hermann-Muth-Straße 6 | MaLo: 50168319596",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 4,
+          "meter_name": "Gas| Papierfabrik Adolf Jass GmbH & Co. KG | 36039 Fulda",
+          "sheet": "Gas|Papierfabrik|36039"
+        },
+        {
+          "channel": 9,
+          "channel_name": "Hermann-Muth-Straße 6 | MaLo: 50168315635",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 4,
+          "meter_name": "Gas| Papierfabrik Adolf Jass GmbH & Co. KG | 36039 Fulda",
+          "sheet": "Gas|Papierfabrik|36039|9"
+        }
+      ],
+      "client": 62,
+      "enabled": true,
+      "name": "Papierfabrik"
+    },
+    {
+      "channels": [
+        {
+          "channel": 3,
+          "channel_name": "Solectronstr. 2 | Malo: 50252762411",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | PHOENIX CONTACT Connector Technology GmbH | 71083 Herrenberg",
+          "sheet": "Strom|Phoenix Contact|71083"
+        },
+        {
+          "channel": 4,
+          "channel_name": "Heisenbergstraße 1 | Malo: 50252761786",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | PHOENIX CONTACT Connector Technology GmbH | 71083 Herrenberg",
+          "sheet": "Strom|Phoenix Contact|71083|4"
+        },
+        {
+          "channel": 5,
+          "channel_name": "Heisenbergstraße 1 | Malo: 50252810749",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | PHOENIX CONTACT Connector Technology GmbH | 71083 Herrenberg",
+          "sheet": "Strom|Phoenix Contact|71083|5"
+        },
+        {
+          "channel": 6,
+          "channel_name": "Richard-Willstätter-Straße 6 | Malo: 51289869999",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Strom | PHOENIX CONTACT Cyber Security GmbH | 12489 Berlin",
+          "sheet": "Strom|Phoenix Contact|12489"
+        },
+        {
+          "channel": 7,
+          "channel_name": "Bahnhofstraße 9 | MaLo: 50177844576",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 4,
+          "meter_name": "Strom | PHOENIX CONTACT E-Mobility GmbH | 32816 Schieder-Schwalenberg",
+          "sheet": "Strom|Phoenix Contact|32816"
+        },
+        {
+          "channel": 8,
+          "channel_name": "Hainbergstraße 2 | Malo: 50185928841",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 4,
+          "meter_name": "Strom | PHOENIX CONTACT E-Mobility GmbH | 32816 Schieder-Schwalenberg",
+          "sheet": "Strom|Phoenix Contact|32816|8"
+        },
+        {
+          "channel": 9,
+          "channel_name": "Hainbergstraße 2 | Malo: 50186181068",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 4,
+          "meter_name": "Strom | PHOENIX CONTACT E-Mobility GmbH | 32816 Schieder-Schwalenberg",
+          "sheet": "Strom|Phoenix Contact|32816|9"
+        },
+        {
+          "channel": 10,
+          "channel_name": "Bahnhofstraße 7 | Malo: 50178157027",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 5,
+          "meter_name": "Strom | Phoenix Contact GmbH & Co. KG | 32816 Schieder-Schwalenberg",
+          "sheet": "Strom|Phoenix Contact|32816|10"
+        },
+        {
+          "channel": 11,
+          "channel_name": "Thaler Landstraße 13 | Malo: 50767168542",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 6,
+          "meter_name": "Strom | Phoenix Contact GmbH & Co. KG | 31863 Bad Pyrmont",
+          "sheet": "Strom|Phoenix Contact|31863"
+        },
+        {
+          "channel": 12,
+          "channel_name": "Flachsmarktstraße 8  | Malo: 10099438196",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 7,
+          "meter_name": "Strom | Phoenix Contact GmbH & Co. KG | 32825 Blomberg",
+          "sheet": "Strom|Phoenix Contact|32825"
+        },
+        {
+          "channel": 13,
+          "channel_name": "Flachsmarktstraße 8  | Malo: 10099532378",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 7,
+          "meter_name": "Strom | Phoenix Contact GmbH & Co. KG | 32825 Blomberg",
+          "sheet": "Strom|Phoenix Contact|32825|13"
+        },
+        {
+          "channel": 14,
+          "channel_name": "Flachsmarktstraße 8  | Malo: 10099546171",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 7,
+          "meter_name": "Strom | Phoenix Contact GmbH & Co. KG | 32825 Blomberg",
+          "sheet": "Strom|Phoenix Contact|32825|14"
+        },
+        {
+          "channel": 15,
+          "channel_name": "Schmuckenberger Weg 16 | Malo: 10099530752",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 7,
+          "meter_name": "Strom | Phoenix Contact GmbH & Co. KG | 32825 Blomberg",
+          "sheet": "Strom|Phoenix Contact|32825|15"
+        },
+        {
+          "channel": 16,
+          "channel_name": "Königswinkel 10a | Malo: 10099428717",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 8,
+          "meter_name": "Strom | PHOENIX TESTLAB GMBH | 32825 Blomberg",
+          "sheet": "Strom|Phoenix Contact|32825|16"
+        },
+        {
+          "channel": 18,
+          "channel_name": "Campusallee 6 | Malo: 51128972704",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 9,
+          "meter_name": "Strom | Phoenix Contact GmbH & Co. KG | 32657 Lemgo",
+          "sheet": "Strom|Phoenix Contact|32657"
+        },
+        {
+          "channel": 19,
+          "channel_name": "Oberes Feld 1 | Malo: 50177962766",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 10,
+          "meter_name": "Strom | Phoenix Contact Power Supplies GmbH | 33106 Paderborn",
+          "sheet": "Strom|Phoenix Contact|33106"
+        },
+        {
+          "channel": 20,
+          "channel_name": "Oberes Feld 1a | Malo: 50177942932",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 10,
+          "meter_name": "Strom | Phoenix Contact Power Supplies GmbH | 33106 Paderborn",
+          "sheet": "Strom|Phoenix Contact|33106|20"
+        },
+        {
+          "channel": 21,
+          "channel_name": "Baukloh 12-14 | Malo: 50933015816",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 11,
+          "meter_name": "Strom | PHOENIX FEINBAU GmbH & Co. KG | 58515 Lüdenscheid",
+          "sheet": "Strom|Phoenix Contact|58515"
+        },
+        {
+          "channel": 22,
+          "channel_name": "Baukloh 10 | Malo: 50933015832",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 11,
+          "meter_name": "Strom | PHOENIX FEINBAU GmbH & Co. KG | 58515 Lüdenscheid",
+          "sheet": "Strom|Phoenix Contact|58515|22"
+        },
+        {
+          "channel": 23,
+          "channel_name": "Gustavstraße 3 | Malo: 50933015840",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 11,
+          "meter_name": "Strom | PHOENIX FEINBAU GmbH & Co. KG | 58515 Lüdenscheid",
+          "sheet": "Strom|Phoenix Contact|58515|23"
+        },
+        {
+          "channel": 24,
+          "channel_name": "Wefelshohler Straße 35 | Malo: 50933015949",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 11,
+          "meter_name": "Strom | PHOENIX FEINBAU GmbH & Co. KG | 58515 Lüdenscheid",
+          "sheet": "Strom|Phoenix Contact|58515|24"
+        },
+        {
+          "channel": 25,
+          "channel_name": "Wefelshohler Straße 25 | Malo: 50933015824",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 11,
+          "meter_name": "Strom | PHOENIX FEINBAU GmbH & Co. KG | 58515 Lüdenscheid",
+          "sheet": "Strom|Phoenix Contact|58515|25"
+        },
+        {
+          "channel": 26,
+          "channel_name": "Wefelshohler Straße 31 | Malo: 50933005669",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 12,
+          "meter_name": "Strom | PHOENIX FEINBAU GmbH & Co. KG | 58511 Lüdenscheid",
+          "sheet": "Strom|Phoenix Contact|58511"
+        },
+        {
+          "channel": 27,
+          "channel_name": "Wefelshohler Straße 37 | Malo: 50933011997",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 12,
+          "meter_name": "Strom | PHOENIX FEINBAU GmbH & Co. KG | 58511 Lüdenscheid",
+          "sheet": "Strom|Phoenix Contact|58511|27"
+        },
+        {
+          "channel": 28,
+          "channel_name": "Neue Schichtstraße 14 | Malo: 50091127800",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 13,
+          "meter_name": "Strom | Pulsotronic GmbH | 09366 Niederdorf",
+          "sheet": "Strom|Phoenix Contact|09366"
+        },
+        {
+          "channel": 29,
+          "channel_name": "Neue Schichtstraße 14 | Malo: 50091120961",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 14,
+          "meter_name": "Strom | SKS Kontakttechnik GmbH | 09366 Niederdorf",
+          "sheet": "Strom|Phoenix Contact|09366|29"
+        },
+        {
+          "channel": 30,
+          "channel_name": "Neue Schichtstraße 14 | Malo: 50090075703",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 14,
+          "meter_name": "Strom | SKS Kontakttechnik GmbH | 09366 Niederdorf",
+          "sheet": "Strom|Phoenix Contact|09366|30"
+        },
+        {
+          "channel": 31,
+          "channel_name": "Neue Schichtstraße 14 | Malo: 50088317901",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 14,
+          "meter_name": "Strom | SKS Kontakttechnik GmbH | 09366 Niederdorf",
+          "sheet": "Strom|Phoenix Contact|09366|31"
+        },
+        {
+          "channel": 34,
+          "channel_name": "Am Rosenhügel 1-7 | Malo: 50676903245",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 16,
+          "meter_name": "Strom | Phoenix Contact Energy Automation GmbH | 42553 Velbert",
+          "sheet": "Strom|Phoenix Contact|42553"
+        },
+        {
+          "channel": 35,
+          "channel_name": "Heisenbergstraße 1 | Malo: 51291403818",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 17,
+          "meter_name": "Gas | Phoenix Contact Connector Technology GmbH | 71083 Herrenberg",
+          "sheet": "Gas|Phoenix Contact|71083"
+        },
+        {
+          "channel": 36,
+          "channel_name": "Solectronstr. 2 | Malo: 51291415988",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 17,
+          "meter_name": "Gas | Phoenix Contact Connector Technology GmbH | 71083 Herrenberg",
+          "sheet": "Gas|Phoenix Contact|71083|36"
+        },
+        {
+          "channel": 37,
+          "channel_name": "Thaler Landstraße 13 | MaLo: 51078420754",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 18,
+          "meter_name": "Gas | Phoenix Contact GmbH & Co. KG | 31863 Bad Pyrmont",
+          "sheet": "Gas|Phoenix Contact|31863"
+        },
+        {
+          "channel": 38,
+          "channel_name": "Dringenauerstraße 30 | MaLo: 51078410466",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 18,
+          "meter_name": "Gas | Phoenix Contact GmbH & Co. KG | 31863 Bad Pyrmont",
+          "sheet": "Gas|Phoenix Contact|31863|38"
+        },
+        {
+          "channel": 39,
+          "channel_name": "Thaler Landstraße 13 | MaLo: 51078488786",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 18,
+          "meter_name": "Gas | Phoenix Contact GmbH & Co. KG | 31863 Bad Pyrmont",
+          "sheet": "Gas|Phoenix Contact|31863|39"
+        },
+        {
+          "channel": 40,
+          "channel_name": "Thaler Landstraße 13 | MaLo: 51078488778",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 18,
+          "meter_name": "Gas | Phoenix Contact GmbH & Co. KG | 31863 Bad Pyrmont",
+          "sheet": "Gas|Phoenix Contact|31863|40"
+        },
+        {
+          "channel": 41,
+          "channel_name": "Flachsmarktstraße 8 | Malo: 10099454928",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 20,
+          "meter_name": "Gas | Phoenix Contact GmbH & Co. KG | 32825 Blomberg",
+          "sheet": "Gas|Phoenix Contact|32825"
+        },
+        {
+          "channel": 42,
+          "channel_name": "Flachsmarktstraße 8 | Malo: 10099466254",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 20,
+          "meter_name": "Gas | Phoenix Contact GmbH & Co. KG | 32825 Blomberg",
+          "sheet": "Gas|Phoenix Contact|32825|42"
+        },
+        {
+          "channel": 43,
+          "channel_name": "Schmuckenberger Weg 16 | Malo: 10099531578",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 20,
+          "meter_name": "Gas | Phoenix Contact GmbH & Co. KG | 32825 Blomberg",
+          "sheet": "Gas|Phoenix Contact|32825|43"
+        },
+        {
+          "channel": 44,
+          "channel_name": "Königswinkel 10 | Malo: 10099466262",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 21,
+          "meter_name": "Gas | PHOENIX TESTLAB GMBH | 32825 Blomberg",
+          "sheet": "Gas|Phoenix Contact|32825|44"
+        },
+        {
+          "channel": 45,
+          "channel_name": "Königswinkel 10 | Malo: 10099463812",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 21,
+          "meter_name": "Gas | PHOENIX TESTLAB GMBH | 32825 Blomberg",
+          "sheet": "Gas|Phoenix Contact|32825|45"
+        },
+        {
+          "channel": 46,
+          "channel_name": "Bahnhofstraße 7 | MaLo: 50601506890",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 22,
+          "meter_name": "Gas | Phoenix Contact GmbH & Co. KG | 32816 Schieder-Schwalenberg",
+          "sheet": "Gas|Phoenix Contact|32816"
+        },
+        {
+          "channel": 47,
+          "channel_name": "Oberes Feld 1 | Malo: 50177801964",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 23,
+          "meter_name": "Gas | Phoenix Contact Power Supplies GmbH | 33106 Paderborn",
+          "sheet": "Gas|Phoenix Contact|33106"
+        },
+        {
+          "channel": 48,
+          "channel_name": "Oberes Feld 1a | Malo: 50177310759",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 23,
+          "meter_name": "Gas | Phoenix Contact Power Supplies GmbH | 33106 Paderborn",
+          "sheet": "Gas|Phoenix Contact|33106|48"
+        },
+        {
+          "channel": 49,
+          "channel_name": "Wefelshohler Straße 23 | Malo: 50931751959",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 24,
+          "meter_name": "Gas | PHOENIX FEINBAU GmbH & Co. KG | 58511 Lüdenscheid",
+          "sheet": "Gas|Phoenix Contact|58511"
+        },
+        {
+          "channel": 50,
+          "channel_name": "Gustavstraße 3 | Malo: 50931205336",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 24,
+          "meter_name": "Gas | PHOENIX FEINBAU GmbH & Co. KG | 58511 Lüdenscheid",
+          "sheet": "Gas|Phoenix Contact|58511|50"
+        },
+        {
+          "channel": 51,
+          "channel_name": "Neue Schichtstraße 14 | Malo: 10232471903",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 25,
+          "meter_name": "Gas | SKS Kontakttechnik GmbH | 09366 Niederdorf",
+          "sheet": "Gas|Phoenix Contact|09366"
+        }
+      ],
+      "client": 86,
+      "enabled": true,
+      "name": "Phoenix Contact"
+    },
+    {
+      "channels": [
+        {
+          "channel": 1,
+          "channel_name": "Industriestraße 8 | MaLo: 50791064774",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | Progress-Werk Oberkirch AG | 77704 Oberkirch",
+          "sheet": "Strom|ProgressWerk|77704"
+        }
+      ],
+      "client": 57,
+      "enabled": true,
+      "name": "ProgressWerk"
+    },
+    {
+      "channels": [
+        {
+          "channel": 3,
+          "channel_name": "PW05 Emslandstraße 8–10 | MaLo: 10208435446",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | Progroup Board GmbH | 48465 Schüttorf",
+          "sheet": "Strom|Progroup|48465"
+        },
+        {
+          "channel": 4,
+          "channel_name": "PW06 Prowell-Straße 1 | MaLo: 51282741615",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Strom | Progroup Board GmbH | 76877 Offenbach",
+          "sheet": "Strom|Progroup|76877"
+        },
+        {
+          "channel": 12,
+          "channel_name": "PW06 Prowell-Straße 1 | MaLo: 51282795133",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Strom | Progroup Board GmbH | 76877 Offenbach",
+          "sheet": "Strom|Progroup|76877|12"
+        },
+        {
+          "channel": 5,
+          "channel_name": "PW09 Liebenstein 15 | MaLo: 50308921747",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 4,
+          "meter_name": "Strom | Progroup Board GmbH | 95703 Plößberg",
+          "sheet": "Strom|Progroup|95703"
+        },
+        {
+          "channel": 6,
+          "channel_name": "PW9 Liebenstein 15c | MaLo: 50308049698",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 4,
+          "meter_name": "Strom | Progroup Board GmbH | 95703 Plößberg",
+          "sheet": "Strom|Progroup|95703|6"
+        },
+        {
+          "channel": 7,
+          "channel_name": "PW13 Am Eichgraben 16–18 | MaLo: 51159178868",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 5,
+          "meter_name": "Strom | Progroup Board GmbH | 98673 Eisfeld",
+          "sheet": "Strom|Progroup|98673"
+        },
+        {
+          "channel": 8,
+          "channel_name": "Progroup Board GmbH PW13 (KWK) | MaLo: 51159361637",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 5,
+          "meter_name": "Strom | Progroup Board GmbH | 98673 Eisfeld",
+          "sheet": "Strom|Progroup|98673|8"
+        },
+        {
+          "channel": 36,
+          "channel_name": "PW13 Am Eichgraben 16–18 | MaLo: 51159259402",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 5,
+          "meter_name": "Strom | Progroup Board GmbH | 98673 Eisfeld",
+          "sheet": "Strom|Progroup|98673|36"
+        },
+        {
+          "channel": 9,
+          "channel_name": "PW15 Jürgen-Heindl-Straße 1 | MaLo: 50415718871",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 6,
+          "meter_name": "Strom | Progroup Board GmbH | 66989 Höheischweiler-Petersberg",
+          "sheet": "Strom|Progroup|66989"
+        },
+        {
+          "channel": 10,
+          "channel_name": "PW15 Jürgen-Heindl-Straße 1 | MaLo: 50415872809",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 6,
+          "meter_name": "Strom | Progroup Board GmbH | 66989 Höheischweiler-Petersberg",
+          "sheet": "Strom|Progroup|66989|10"
+        },
+        {
+          "channel": 11,
+          "channel_name": "PW15 Jürgen-Heindl-Straße 1 | MaLo: 50415872833",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 6,
+          "meter_name": "Strom | Progroup Board GmbH | 66989 Höheischweiler-Petersberg",
+          "sheet": "Strom|Progroup|66989|11"
+        },
+        {
+          "channel": 13,
+          "channel_name": "PM1 Lindenallee 28 | MaLo: 50418983603",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 8,
+          "meter_name": "Strom | Progroup Paper PM1 GmbH | 39288 Burg",
+          "sheet": "Strom|Progroup|39288"
+        },
+        {
+          "channel": 14,
+          "channel_name": "PM2 Oberlandstraße 110 | MaLo: 50482986708",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 9,
+          "meter_name": "Strom | Progroup Paper PM2 GmbH | 15890 Eisenhüttenstadt",
+          "sheet": "Strom|Progroup|15890"
+        },
+        {
+          "channel": 15,
+          "channel_name": "PM3 Auf der Sonnenseite 3 | MaLo: 50116831120",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 10,
+          "meter_name": "Strom | Progroup Paper PM3 GmbH | 06792 Sandersdorf-Brehna",
+          "sheet": "Strom|Progroup|06792"
+        },
+        {
+          "channel": 17,
+          "channel_name": "PM3 Auf der Sonnenseite 3 | MaLo: 50117167160",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 10,
+          "meter_name": "Strom | Progroup Paper PM3 GmbH | 06792 Sandersdorf-Brehna",
+          "sheet": "Strom|Progroup|06792|17"
+        },
+        {
+          "channel": 32,
+          "channel_name": "PM3 Thalheimer Straße 901 Z | MaLo: 50116895506",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 10,
+          "meter_name": "Strom | Progroup Paper PM3 GmbH | 06792 Sandersdorf-Brehna",
+          "sheet": "Strom|Progroup|06792|32"
+        },
+        {
+          "channel": 33,
+          "channel_name": "PM3 Auf der Sonnenseite 3 | MaLo: 50117167152",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 10,
+          "meter_name": "Strom | Progroup Paper PM3 GmbH | 06792 Sandersdorf-Brehna",
+          "sheet": "Strom|Progroup|06792|33"
+        },
+        {
+          "channel": 18,
+          "channel_name": "GO Horstring 12 | MaLo: 51282903968",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 11,
+          "meter_name": "Strom | Progroup AG | 76829 Landau",
+          "sheet": "Strom|Progroup|76829"
+        },
+        {
+          "channel": 28,
+          "channel_name": "PPO1 Oderlandstraße 109 | MaLo: 50482811806",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 16,
+          "meter_name": "Strom | Progroup Power 1 GmbH  | 15890 Eisenhüttenstadt",
+          "sheet": "Strom|Progroup|15890|28"
+        },
+        {
+          "channel": 29,
+          "channel_name": "PPO1 Oderlandstraße 109 | MaLo: 51656676133",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 16,
+          "meter_name": "Strom | Progroup Power 1 GmbH  | 15890 Eisenhüttenstadt",
+          "sheet": "Strom|Progroup|15890|29"
+        },
+        {
+          "channel": 16,
+          "channel_name": "PM3 Auf der Sonnenseite 3 | MaLo: 50117152096",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 17,
+          "meter_name": "Strom | Progroup Power 2 GmbH | 06792 Sandersdorf-Brehna",
+          "sheet": "Strom|Progroup|06792|16"
+        },
+        {
+          "channel": 30,
+          "channel_name": "PPO2 Auf der Sonnenseite 3a | MaLo: 51726647692",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 17,
+          "meter_name": "Strom | Progroup Power 2 GmbH | 06792 Sandersdorf-Brehna",
+          "sheet": "Strom|Progroup|06792|30"
+        },
+        {
+          "channel": 37,
+          "channel_name": "PPO2 Auf der Sonnenseite 3a | MaLo: 51726760311",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 17,
+          "meter_name": "Strom | Progroup Power 2 GmbH | 06792 Sandersdorf-Brehna",
+          "sheet": "Strom|Progroup|06792|37"
+        },
+        {
+          "channel": 35,
+          "channel_name": "PM4 Obernburger Straße 1–9 | MaLo: 50526764854",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 19,
+          "meter_name": "Strom | Progroup Paper PM4 GmbH | 63811 Stockstadt am Main",
+          "sheet": "Strom|Progroup|63811"
+        },
+        {
+          "channel": 19,
+          "channel_name": "PM1 (1) | MaLo: 10104859526",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 12,
+          "meter_name": "Gas | Progroup Paper PM1 GmbH | 39288 Burg",
+          "sheet": "Gas|Progroup|39288"
+        },
+        {
+          "channel": 20,
+          "channel_name": "PM1 (2) | MaLo: 10104877958",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 12,
+          "meter_name": "Gas | Progroup Paper PM1 GmbH | 39288 Burg",
+          "sheet": "Gas|Progroup|39288|20"
+        },
+        {
+          "channel": 21,
+          "channel_name": "PPO2 | MaLo: 10112099932",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 13,
+          "meter_name": "Gas | Progroup Power 2 GmbH | 39288 Burg",
+          "sheet": "Gas|Progroup|39288|21"
+        },
+        {
+          "channel": 22,
+          "channel_name": "PW05 | MaLo: 10208258054",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 14,
+          "meter_name": "Gas | Progroup Board GmbH | 76877 Offenbach",
+          "sheet": "Gas|Progroup|76877"
+        },
+        {
+          "channel": 23,
+          "channel_name": "PW06 | MaLo: 50920491623",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 14,
+          "meter_name": "Gas | Progroup Board GmbH | 76877 Offenbach",
+          "sheet": "Gas|Progroup|76877|23"
+        },
+        {
+          "channel": 24,
+          "channel_name": "PW09 | MaLo: 50310331786",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 14,
+          "meter_name": "Gas | Progroup Board GmbH | 76877 Offenbach",
+          "sheet": "Gas|Progroup|76877|24"
+        },
+        {
+          "channel": 25,
+          "channel_name": "PW13 | MaLo: 10167997529",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 14,
+          "meter_name": "Gas | Progroup Board GmbH | 76877 Offenbach",
+          "sheet": "Gas|Progroup|76877|25"
+        },
+        {
+          "channel": 26,
+          "channel_name": "PW15 | MaLo: 10007040769",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 14,
+          "meter_name": "Gas | Progroup Board GmbH | 76877 Offenbach",
+          "sheet": "Gas|Progroup|76877|26"
+        },
+        {
+          "channel": 31,
+          "channel_name": "VP05 | MaLo: 10208253442",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 14,
+          "meter_name": "Gas | Progroup Board GmbH | 76877 Offenbach",
+          "sheet": "Gas|Progroup|76877|31"
+        },
+        {
+          "channel": 27,
+          "channel_name": "PM4 | MaLo: 50668463017",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 15,
+          "meter_name": "Gas | Progroup Paper PM4 GmbH | 39288 Burg",
+          "sheet": "Gas|Progroup|39288|27"
+        }
+      ],
+      "client": 61,
+      "enabled": true,
+      "name": "Progroup"
+    },
+    {
+      "channels": [
+        {
+          "channel": 3,
+          "channel_name": "Kreuzauer Str. 18 | MaLo: 50040775741",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | SCHOELLERSHAMMER GmbH | 52355 Düren",
+          "sheet": "Strom|SchoellerShammer|52355"
+        },
+        {
+          "channel": 4,
+          "channel_name": "Kreuzauer Str. 18 | MaLo: 50040610773",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Gas | SCHOELLERSHAMMER GmbH | 52355 Düren",
+          "sheet": "Gas|SchoellerShammer|52355"
+        },
+        {
+          "channel": 5,
+          "channel_name": "Kreuzauer Str. 18 | MaLo: 50040610765",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Gas | SCHOELLERSHAMMER GmbH | 52355 Düren",
+          "sheet": "Gas|SchoellerShammer|52355|5"
+        }
+      ],
+      "client": 76,
+      "enabled": true,
+      "name": "SchoellerShammer"
+    },
+    {
+      "channels": [
+        {
+          "channel": 11,
+          "channel_name": "Werk II Haupteinspeisung | MaLo: 50503177434",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 10,
+          "meter_name": "Strom | Schoeller Werk GmbH & Co. KG | 53940 Hellenthal",
+          "sheet": "Strom|SchoellerWerk|53940"
+        },
+        {
+          "channel": 12,
+          "channel_name": "Werk II Noteinspeisung | MaLo: 50503417905",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 10,
+          "meter_name": "Strom | Schoeller Werk GmbH & Co. KG | 53940 Hellenthal",
+          "sheet": "Strom|SchoellerWerk|53940|12"
+        },
+        {
+          "channel": 13,
+          "channel_name": "Werk IV | MaLo: 50503177393",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 10,
+          "meter_name": "Strom | Schoeller Werk GmbH & Co. KG | 53940 Hellenthal",
+          "sheet": "Strom|SchoellerWerk|53940|13"
+        },
+        {
+          "channel": 14,
+          "channel_name": "Feinrohr | MaLo: 51158556982",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 10,
+          "meter_name": "Strom | Schoeller Werk GmbH & Co. KG | 53940 Hellenthal",
+          "sheet": "Strom|SchoellerWerk|53940|14"
+        },
+        {
+          "channel": 17,
+          "channel_name": "Pooling (Haupteinspeisung, Noteinspeisung) | MaLo: 50503526235",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 10,
+          "meter_name": "Strom | Schoeller Werk GmbH & Co. KG | 53940 Hellenthal",
+          "sheet": "Strom|SchoellerWerk|53940|17"
+        },
+        {
+          "channel": 9,
+          "channel_name": "Im Kirschseiffen | MaLo: 10217485375",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 11,
+          "meter_name": "Gas | Schoeller Werk GmbH & Co. KG | 53940 Hellenthal",
+          "sheet": "Gas|SchoellerWerk|53940"
+        },
+        {
+          "channel": 10,
+          "channel_name": "Kölner Straße 136 | MaLo: 10217486084",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 11,
+          "meter_name": "Gas | Schoeller Werk GmbH & Co. KG | 53940 Hellenthal",
+          "sheet": "Gas|SchoellerWerk|53940|10"
+        }
+      ],
+      "client": 36,
+      "enabled": true,
+      "name": "SchoellerWerk"
+    },
+    {
+      "channels": [
+        {
+          "channel": 8,
+          "channel_name": "LUEG 329 | MaLo: 50177851258",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 4,
+          "meter_name": "Strom | Schwering und Hasse Elektrodraht GmbH | 32676 Lugde",
+          "sheet": "Strom|Schwering und Hasse|32676"
+        },
+        {
+          "channel": 9,
+          "channel_name": "Noteinspeisung Ortsnetz Zahlernummer SK0067316343 | MaLo: 50177968748",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 4,
+          "meter_name": "Strom | Schwering und Hasse Elektrodraht GmbH | 32676 Lugde",
+          "sheet": "Strom|Schwering und Hasse|326_2"
+        },
+        {
+          "channel": 7,
+          "channel_name": "Auf den Kreuzen 24 | MaLo: 10099435283",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 5,
+          "meter_name": "Strom | Synflex Elektro GmbH | 32825 Blomberg",
+          "sheet": "Strom|Schwering und Hasse|32825"
+        },
+        {
+          "channel": 6,
+          "channel_name": "Nordstr. 32 inkl. Photovoltaik­Anlage mit Überschusseinspeisungsvertrag | MaLo: 50238956814",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 6,
+          "meter_name": "Strom | Isotek GmbH | 74219 Möckmühl",
+          "sheet": "Strom|Schwering und Hasse|74219"
+        },
+        {
+          "channel": 5,
+          "channel_name": "Pottensteiner Str. 6b | MaLo: 51279082262",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 7,
+          "meter_name": "Strom | Segliwa GmbH | 95447 Bayreuth",
+          "sheet": "Strom|Schwering und Hasse|95447"
+        },
+        {
+          "channel": 4,
+          "channel_name": "Pyrmonter Str. 3-5 | MaLo: 50177800734",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 8,
+          "meter_name": "Gas | Schwering & Hasse Elektrodraht GmbH | 32676 Lügde",
+          "sheet": "Gas|Schwering und Hasse|32676"
+        }
+      ],
+      "client": 2,
+      "enabled": true,
+      "name": "Schwering und Hasse"
+    },
+    {
+      "channels": [
+        {
+          "channel": 2,
+          "channel_name": "Werk St. Leon-Rot | MaLo:50232868049",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | SLR Giesserei St. Leon-Rot GmbH | 68789 St. Leon-Rot",
+          "sheet": "Strom|SLR|68789"
+        },
+        {
+          "channel": 3,
+          "channel_name": "Werk Elsterheide | MaLo:50074266229",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Strom | SLR Giesserei Elsterheide GmbH | 02979 Elsterheide",
+          "sheet": "Strom|SLR|02979"
+        }
+      ],
+      "client": 77,
+      "enabled": true,
+      "name": "SLR"
+    },
+    {
+      "channels": [
+        {
+          "channel": 3,
+          "channel_name": "Schachenstraße 14 | Malo: 50248972769",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Strom | ST Extruded Products Germany GmbH | 88267 Vogt",
+          "sheet": "Strom|StepG|88267"
+        },
+        {
+          "channel": 4,
+          "channel_name": "Deviller Straße 2 | MaLo: 50112652869",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 4,
+          "meter_name": "Strom | ST Extruded Products Germany GmbH | 06749 Bitterfeld-Wolfen",
+          "sheet": "Strom|StepG|06749"
+        },
+        {
+          "channel": 5,
+          "channel_name": "Friedrich Wöhler Str. 2 | MaLo: 51292815658",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 5,
+          "meter_name": "Strom | ST Extruded Products Germany GmbH | 53117 Bonn",
+          "sheet": "Strom|StepG|53117"
+        },
+        {
+          "channel": 6,
+          "channel_name": "Lichtlöcherberg 40 | Malo: 50085297627",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 6,
+          "meter_name": "Strom | ST Extruded Products Germany GmbH | 06333 Hettstedt",
+          "sheet": "Strom|StepG|06333"
+        },
+        {
+          "channel": 8,
+          "channel_name": "Schachenstraße 14 | Malo: 50920507058",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 7,
+          "meter_name": "Gas | ST Extruded Products Germany GmbH | 88267 Vogt",
+          "sheet": "Gas|StepG|88267"
+        },
+        {
+          "channel": 9,
+          "channel_name": "Devillestraße 2 | Malo: 50112680068",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 8,
+          "meter_name": "Gas | ST Extruded Products Germany GmbH | 06749 Bitterfeld",
+          "sheet": "Gas|StepG|06749"
+        },
+        {
+          "channel": 10,
+          "channel_name": "Georg-von-Boeselager-Str. 25 | Malo: 51294527623",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 9,
+          "meter_name": "Gas | ST Extruded Products Germany GmbH | 53117 Bonn",
+          "sheet": "Gas|StepG|53117"
+        },
+        {
+          "channel": 11,
+          "channel_name": "Lichtlöcherberg 40 | Malo: 50108890788",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 10,
+          "meter_name": "Gas | ST Extruded Products Germany GmbH | 06333 Hettstedt",
+          "sheet": "Gas|StepG|06333"
+        }
+      ],
+      "client": 84,
+      "enabled": true,
+      "name": "StepG"
+    },
+    {
+      "channels": [
+        {
+          "channel": 2,
+          "channel_name": "Binsfeldhammer 14 | MaLo: 50596625656",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | Nyrstar Stolberg GmbH | 52224 Stolberg",
+          "sheet": "Strom|Stolberg|52224"
+        },
+        {
+          "channel": 3,
+          "channel_name": "Binsfeldhammer 14 | MaLo: 51259658950",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | Nyrstar Stolberg GmbH | 52224 Stolberg",
+          "sheet": "Strom|Stolberg|52224|3"
+        },
+        {
+          "channel": 1,
+          "channel_name": "Binsfeldhammer 14 | MaLo: 51053833584",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Gas | Nyrstar Stolberg GmbH | 52224 Stolberg",
+          "sheet": "Gas|Stolberg|52224"
+        }
+      ],
+      "client": 71,
+      "enabled": true,
+      "name": "Stolberg"
+    },
+    {
+      "channels": [
+        {
+          "channel": 2,
+          "channel_name": "Josef Suwelack Str. 1 | MaLo: 10088154696",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Gas | Dr. Otto Suwelack Nachf. GmbH & Co. KG | 48727 Billerbeck",
+          "sheet": "Gas|Suwelack|48727"
+        }
+      ],
+      "client": 73,
+      "enabled": true,
+      "name": "Suwelack"
+    },
+    {
+      "channels": [
+        {
+          "channel": 15,
+          "channel_name": "Gebäude J, Linie 1-4, Linie 9  | MaLo: 50673856843",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 8,
+          "meter_name": "Strom  | Teijin Carbon Europe GmbH | 52525 Heinsberg",
+          "sheet": "Strom|Teijin|52525"
+        },
+        {
+          "channel": 16,
+          "channel_name": "Gebäude J, Linie 1-4, Linie 9  | MaLo: 50673856851",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 8,
+          "meter_name": "Strom  | Teijin Carbon Europe GmbH | 52525 Heinsberg",
+          "sheet": "Strom|Teijin|52525|16"
+        },
+        {
+          "channel": 17,
+          "channel_name": "Gebäude T, Halle T | MaLo: 50673858998",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 8,
+          "meter_name": "Strom  | Teijin Carbon Europe GmbH | 52525 Heinsberg",
+          "sheet": "Strom|Teijin|52525|17"
+        },
+        {
+          "channel": 18,
+          "channel_name": "Gebäude R, Halle R | MaLo: 50674700205",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 8,
+          "meter_name": "Strom  | Teijin Carbon Europe GmbH | 52525 Heinsberg",
+          "sheet": "Strom|Teijin|52525|18"
+        },
+        {
+          "channel": 19,
+          "channel_name": "Gebäude S, Halle S | MaLo: 50673857148",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 8,
+          "meter_name": "Strom  | Teijin Carbon Europe GmbH | 52525 Heinsberg",
+          "sheet": "Strom|Teijin|52525|19"
+        },
+        {
+          "channel": 21,
+          "channel_name": "Gebäude J, Linie 1, Zähler 703 | MaLo: 50673872443",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 9,
+          "meter_name": "Gas | Teijin Carbon Europe GmbH | 52525 Heinsberg",
+          "sheet": "Gas|Teijin|52525"
+        },
+        {
+          "channel": 22,
+          "channel_name": "Gebäude J, Linie 2, Zähler 702 | MaLo: 50673872477",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 9,
+          "meter_name": "Gas | Teijin Carbon Europe GmbH | 52525 Heinsberg",
+          "sheet": "Gas|Teijin|52525|22"
+        },
+        {
+          "channel": 23,
+          "channel_name": "Gebäude J, Linie 3, Zähler 727 | MaLo: 50673872485",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 9,
+          "meter_name": "Gas | Teijin Carbon Europe GmbH | 52525 Heinsberg",
+          "sheet": "Gas|Teijin|52525|23"
+        },
+        {
+          "channel": 24,
+          "channel_name": "Gebäude J, Linie 4, Zähler 730 | MaLo: 50673872493",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 9,
+          "meter_name": "Gas | Teijin Carbon Europe GmbH | 52525 Heinsberg",
+          "sheet": "Gas|Teijin|52525|24"
+        },
+        {
+          "channel": 25,
+          "channel_name": "Gebäude J, Linie 9, Zähler 704 | MaLo: 50673872451",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 9,
+          "meter_name": "Gas | Teijin Carbon Europe GmbH | 52525 Heinsberg",
+          "sheet": "Gas|Teijin|52525|25"
+        },
+        {
+          "channel": 26,
+          "channel_name": "Gebäude J, RTO Linie 1/9, Zähler 729 | MaLo: 50673872469",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 9,
+          "meter_name": "Gas | Teijin Carbon Europe GmbH | 52525 Heinsberg",
+          "sheet": "Gas|Teijin|52525|26"
+        },
+        {
+          "channel": 27,
+          "channel_name": "Gebäude T, Halle T, Zähler 740 | MaLo: 50673850770",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 9,
+          "meter_name": "Gas | Teijin Carbon Europe GmbH | 52525 Heinsberg",
+          "sheet": "Gas|Teijin|52525|27"
+        },
+        {
+          "channel": 28,
+          "channel_name": "Gebäude R, Halle R, Zähler 750 | MaLo: 50674700198",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 9,
+          "meter_name": "Gas | Teijin Carbon Europe GmbH | 52525 Heinsberg",
+          "sheet": "Gas|Teijin|52525|28"
+        }
+      ],
+      "client": 47,
+      "enabled": true,
+      "name": "Teijin"
+    },
+    {
+      "channels": [
+        {
+          "channel": 1,
+          "channel_name": "Waidhofner Straße 11 | AT0020000000000000000000100140347",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | TKM Austria GmbH | 3333 Böhlerwek",
+          "sheet": "Strom|TKM|3333"
+        },
+        {
+          "channel": 2,
+          "channel_name": "In der Fleute 18 | MaLo: 50047773087",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Strom | TKM GmbH | 42897 Remscheid",
+          "sheet": "Strom|TKM|42897"
+        },
+        {
+          "channel": 3,
+          "channel_name": "Heinrich-Hertz-Str. 19 | MaLo: 50454932622",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 4,
+          "meter_name": "Strom | TKM GmbH | 22941 Bargteheide",
+          "sheet": "Strom|TKM|22941"
+        },
+        {
+          "channel": 4,
+          "channel_name": "Heinrich-Hertz-Str. 17 | MaLo: 50453119122",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 4,
+          "meter_name": "Strom | TKM GmbH | 22941 Bargteheide",
+          "sheet": "Strom|TKM|22941|4"
+        },
+        {
+          "channel": 5,
+          "channel_name": "Mittweidaer Str. 44 | MaLo: 50094397088",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 5,
+          "meter_name": "Strom | TKM GmbH | 09326 Geringswalde",
+          "sheet": "Strom|TKM|09326"
+        },
+        {
+          "channel": 10,
+          "channel_name": "Plochinger Str. 36 | MaLo: 50229876584",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 7,
+          "meter_name": "Strom | H. Schönenberger GmbH | 73779 Deizisau",
+          "sheet": "Strom|TKM|73779"
+        },
+        {
+          "channel": 6,
+          "channel_name": "Waidhofner Straße 11 | AT9003590000000000000000100170488",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 6,
+          "meter_name": "Gas | TKM Austria GmbH | 3333 Böhlerwek",
+          "sheet": "Gas|TKM|3333"
+        }
+      ],
+      "client": 53,
+      "enabled": true,
+      "name": "TKM"
+    },
+    {
+      "channels": [
+        {
+          "channel": 2,
+          "channel_name": "Waidhofner Straße 11 | AT0020000000000000000000100140347",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | TKM Austria GmbH | 3333 Böhlerwek",
+          "sheet": "Strom|TKM Austria|3333"
+        },
+        {
+          "channel": 3,
+          "channel_name": "Waidhofner Straße 11 | AT9003590000000000000000100170488",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Gas | TKM Austria GmbH | 3333 Böhlerwek",
+          "sheet": "Gas|TKM Austria|3333"
+        }
+      ],
+      "client": 85,
+      "enabled": true,
+      "name": "TKM Austria"
+    },
+    {
+      "channels": [
+        {
+          "channel": 9,
+          "channel_name": "Im Neuen Felde 87 | MaLo: 50966069492",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Strom | Uelzena eG | 29525 Uelzen",
+          "sheet": "Strom|Uelzena|29525"
+        },
+        {
+          "channel": 13,
+          "channel_name": "Im Neuen Felde 87 | MaLo: 50965783803",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Strom | Uelzena eG | 29525 Uelzen",
+          "sheet": "Strom|Uelzena|29525|13"
+        },
+        {
+          "channel": 10,
+          "channel_name": "Bohnhorster Str. 17 | MaLo: 50428008904",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 4,
+          "meter_name": "Strom | Uelzena eG | 31606 Warmsen",
+          "sheet": "Strom|Uelzena|31606"
+        },
+        {
+          "channel": 11,
+          "channel_name": "Heinrich-Hertz-Str. 28 | MaLo: 50917881358",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 5,
+          "meter_name": "Strom | Uelzena eG | 23909 Ratzeburg",
+          "sheet": "Strom|Uelzena|23909"
+        },
+        {
+          "channel": 12,
+          "channel_name": "Wartenberger Chaussee 12 | MaLo: 50422549293",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 6,
+          "meter_name": "Strom | Uelzena eG | 39629 Bismark",
+          "sheet": "Strom|Uelzena|39629"
+        },
+        {
+          "channel": 2,
+          "channel_name": "BHKW | MaLo: 50966060119",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Gas | Uelzena eG  | 29525 Uelzen",
+          "sheet": "Gas|Uelzena|29525"
+        },
+        {
+          "channel": 4,
+          "channel_name": "Uelzena Reserveversorgung | MaLo: 50966060101",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Gas | Uelzena eG  | 29525 Uelzen",
+          "sheet": "Gas|Uelzena|29525|4"
+        },
+        {
+          "channel": 5,
+          "channel_name": "Uelzena | MaLo: 50966008341",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Gas | Uelzena eG  | 29525 Uelzen",
+          "sheet": "Gas|Uelzena|29525|5"
+        },
+        {
+          "channel": 3,
+          "channel_name": "Schoppe & Schultz | MaLo: 50918088846",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 7,
+          "meter_name": "Gas | Uelzena eG  | 23909 Ratzeburg",
+          "sheet": "Gas|Uelzena|23909"
+        },
+        {
+          "channel": 6,
+          "channel_name": "Warmsener Spezialitäten | MaLo: 10101092575",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 8,
+          "meter_name": "Gas | Uelzena eG  | 31606 Warmsen",
+          "sheet": "Gas|Uelzena|31606"
+        },
+        {
+          "channel": 7,
+          "channel_name": "Altmark-Käserei | MaLo: 50422531894",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 9,
+          "meter_name": "Gas | Uelzena eG   | 39629 Bismark",
+          "sheet": "Gas|Uelzena|39629"
+        }
+      ],
+      "client": 78,
+      "enabled": true,
+      "name": "Uelzena"
+    },
+    {
+      "channels": [
+        {
+          "channel": 3,
+          "channel_name": "Vossko-Allee 1 | MaLo: 50190934114",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | Vossko GmbH & Co. KG | 48346 Ostbevern",
+          "sheet": "Strom|VOSSKO|48346"
+        },
+        {
+          "channel": 4,
+          "channel_name": "Im Schirl 62 | MaLo: 50190833746",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Strom | Vossko GmbH & Co. KG | 48346 Ostbevern",
+          "sheet": "Strom|VOSSKO|48346|4"
+        },
+        {
+          "channel": 5,
+          "channel_name": "Vossko-Allee 1 | MaLo: 50191151642",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Gas | Vossko GmbH & Co. KG | 48346 Ostbevern",
+          "sheet": "Gas|VOSSKO|48346"
+        }
+      ],
+      "client": 87,
+      "enabled": true,
+      "name": "VOSSKO"
+    },
+    {
+      "channels": [
+        {
+          "channel": 8,
+          "channel_name": "Kabelwerk Netzbetreiberübergabe gesamt | MaLo: 50357917234",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 6,
+          "meter_name": "Strom | Waskönig+Walter Kabel-Werk GmbH u. Co. KG | 26683 Saterland",
+          "sheet": "Strom|WaskoenigWalter|26683"
+        },
+        {
+          "channel": 9,
+          "channel_name": "Kabelwerk (virtuell 4,55%)",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 6,
+          "meter_name": "Strom | Waskönig+Walter Kabel-Werk GmbH u. Co. KG | 26683 Saterland",
+          "sheet": "Strom|WaskoenigWalter|26683|9"
+        },
+        {
+          "channel": 10,
+          "channel_name": "Hochspannungskabel (virtuell 95,45%)",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 7,
+          "meter_name": "Strom | Waskönig+Walter Hochspannungskabel GmbH u. Co KG | 26683 Saterland",
+          "sheet": "Strom|WaskoenigWalter|26683|10"
+        },
+        {
+          "channel": 12,
+          "channel_name": "Ostermoorstraße 77 | MaLo: 50369738743",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 8,
+          "meter_name": "Gas | Waskönig+Walter Kabel-Werk GmbH u. Co. KG | 26683 Saterland",
+          "sheet": "Gas|WaskoenigWalter|26683"
+        }
+      ],
+      "client": 6,
+      "enabled": true,
+      "name": "WaskoenigWalter"
+    },
+    {
+      "channels": [
+        {
+          "channel": 3,
+          "channel_name": "Rausingerstr. 137 | MaLo: 50589591020",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 4,
+          "meter_name": "Strom | Vincenz Wiederholt GmbH | 59439 Holzwickede",
+          "sheet": "Strom|Wiederholt|59439"
+        },
+        {
+          "channel": 4,
+          "channel_name": "Schäferkampstr. III | MaLo: 10088154802",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 5,
+          "meter_name": "Gas | Vincenz Wiederholt GmbH | 59439 Holzwickede",
+          "sheet": "Gas|Wiederholt|59439"
+        },
+        {
+          "channel": 7,
+          "channel_name": "SLP Summe",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 6,
+          "meter_name": "Gas | Vincenz Wiederholt GmbH | 59439 Holzwickede",
+          "sheet": "Gas|Wiederholt|59439|7"
+        }
+      ],
+      "client": 42,
+      "enabled": true,
+      "name": "Wiederholt"
+    },
+    {
+      "channels": [
+        {
+          "channel": 9,
+          "channel_name": "Abnahmestelle 1 | MaLo: 51223196655",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 10,
+          "meter_name": "Strom | Zapp Precision Metals GmbH | 59425 Unna",
+          "sheet": "Strom|ZAPP|59425"
+        },
+        {
+          "channel": 10,
+          "channel_name": "Abnahmestelle 2 | MaLo: 50224186409",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 11,
+          "meter_name": "Strom | Zapp Precision Metals GmbH | 58239 Schwerte",
+          "sheet": "Strom|ZAPP|58239"
+        },
+        {
+          "channel": 11,
+          "channel_name": "Abnahmestelle 4 | MaLo: 51343105198",
+          "commodity": "Strom",
+          "enabled": true,
+          "meter_id": 12,
+          "meter_name": "Strom | Zapp Precision Metals GmbH | 75172 Pforzheim",
+          "sheet": "Strom|ZAPP|75172"
+        },
+        {
+          "channel": 12,
+          "channel_name": "Hochstraße 32 | MaLo: 51222929776",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 13,
+          "meter_name": "Gas | Zapp Precision Metals GmbH | 59425 Unna",
+          "sheet": "Gas|ZAPP|59425"
+        },
+        {
+          "channel": 13,
+          "channel_name": "Letmather Straße 69 | MaLo: 50601507632",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 14,
+          "meter_name": "Gas | Zapp Precision Metals GmbH | 58239 Schwerte",
+          "sheet": "Gas|ZAPP|58239"
+        }
+      ],
+      "client": 41,
+      "enabled": true,
+      "name": "ZAPP"
+    },
+    {
+      "channels": [
+        {
+          "channel": 2,
+          "channel_name": "Werk 1 + 1a | MaLo: 51258815410",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 2,
+          "meter_name": "Gas | Zentis GmbH & Co. KG | 52070 Aachen",
+          "sheet": "Gas|Zentis|52070"
+        },
+        {
+          "channel": 1,
+          "channel_name": "Debyestraße 111 | MaLo: 51259079023",
+          "commodity": "Gas",
+          "enabled": true,
+          "meter_id": 3,
+          "meter_name": "Gas | Zentis Süßwaren GmbH & Co. KG | 52078 Aachen",
+          "sheet": "Gas|Zentis|52078"
+        }
+      ],
+      "client": 48,
+      "enabled": true,
+      "name": "Zentis"
+    }
+  ],
+  "output_dir": "reports",
+  "periods": {
+    "mode": "manual",
+    "period_1": [
+      "2026-09-01",
+      "2026-10-01"
+    ],
+    "period_2": [
+      "2026-10-01",
+      "2026-11-01"
+    ]
+  },
+  "thresholds": {
+    "copy_corr": 0.98,
+    "max_ks": 0.2,
+    "max_mean_diff_pct": 15,
+    "max_peak_diff_pct": 20,
+    "max_std_diff_pct": 30,
+    "min_profile_corr": 0.9,
+    "min_weekly_corr": 0.8,
+    "require_profile_match": false
+  },
+  "status_rules": {
+    "max_lag_days": 7,
+    "min_coverage_pct": 90,
+    "spike_iqr_factor": 3.0,
+    "low_level_pct": 50,
+    "request_timeout": 60,
+    "retries": 3,
+    "workers": 8
+  },
+  "report": {
+    "previous_checked_date": "2026-10-07",
+    "current_checked_date": "2026-11-05",
+    "previous_report": ""
+  }
+}

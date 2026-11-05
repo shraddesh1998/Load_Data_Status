@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Load data status</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<aside class="side">
+  <h1>Load data status</h1>
+  <form id="run-form" autocomplete="off">
+    <div class="dates">
+      <label>Previous check<input type="date" name="previous" value="{{ prev }}" required></label>
+      <label>Current check<input type="date" name="current" value="{{ cur }}" required></label>
+    </div>
+
+    <fieldset>
+      <legend>Clients <button type="button" class="link" id="all">All</button><button type="button" class="link" id="none">None</button></legend>
+      <input type="search" id="client-q" placeholder="Find a client">
+      <div id="client-list" class="clients"></div>
+      <p class="hint" id="partial-hint" hidden>Checking only some clients does not update the saved statuses.</p>
+    </fieldset>
+
+    <label class="file">Previous report (.xlsx)
+      <input type="file" name="prev_report" accept=".xlsx">
+      <span class="hint">{{ 'Optional. Saved statuses from the last run are used.' if has_history else 'Use once, so Previous Status can be filled.' }}</span>
+    </label>
+
+    <label class="check"><input type="checkbox" name="demo" value="1"> Use demo data (no API calls)</label>
+    <button class="run" id="run" type="submit">Run check</button>
+  </form>
+
+  <div class="past">
+    <label for="past">Earlier reports</label>
+    <select id="past"></select>
+  </div>
+</aside>
+
+<main>
+  <header class="head">
+    <div>
+      <h2 id="title">No report yet</h2>
+      <p id="sub" class="muted"></p>
+    </div>
+    <a id="dl" class="btn" href="#" hidden>Download Excel</a>
+  </header>
+
+  <section id="progress" class="progress" hidden>
+    <div class="track"><i id="bar"></i></div>
+    <p id="ptext"></p>
+  </section>
+  <p id="error" class="error" role="alert" hidden></p>
+
+  <section id="summary" class="summary" hidden>
+    <div class="split" id="split"></div>
+    <div class="legend" id="legend"></div>
+  </section>
+
+  <section id="tools" class="tools" hidden>
+    <input type="search" id="q" placeholder="Search meter, channel or reason">
+    <div class="seg" id="seg">
+      <button data-f="all" class="on">All</button>
+      <button data-f="bad">No or old data</button>
+      <button data-f="gaps">Gaps</button>
+      <button data-f="ok">Complete</button>
+    </div>
+  </section>
+
+  <div class="tablewrap">
+    <table id="tbl" hidden>
+      <thead><tr><th>Meter</th><th>Channel</th><th class="c">Previous</th><th class="c">Current</th><th>Reason</th></tr></thead>
+    </table>
+    <p id="empty" class="empty">Choose the two check dates and select <b>Run check</b>. Results appear here and are saved as an Excel file.</p>
+  </div>
+</main>
+
+<script>window.CLIENTS = {{ clients|tojson }};</script>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
