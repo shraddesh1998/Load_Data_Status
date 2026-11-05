@@ -1,6 +1,0 @@
-flask>=3.0
-pandas>=2.0
-numpy
-openpyxl
-requests
-gunicorn

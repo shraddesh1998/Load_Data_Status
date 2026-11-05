@@ -598,7 +598,92 @@ def write_excel(rows, path, title, prev_date, cur_date):
 
 
 # =============================================================================
-# Main
+# Report run (used by the command line AND by the Flask app)
+# =============================================================================
+def run_report(cfg, prev, cur, clients=None, demo=False, prev_report=None, save=True,
+               out_path=None, progress=None, debug=False):
+    """Check all enabled channels for the window prev -> cur and write the Excel + JSON report.
+    progress(done, total) is called while running. Returns a dict with the results."""
+    today = date.today()
+    out_dir = Path(cfg.get("output_dir", "reports"))
+    out_dir.mkdir(parents=True, exist_ok=True)
+    hist_path = out_dir / "status_history.json"
+    history = load_history(hist_path)
+    start, end = prev, cur + timedelta(days=1)                # end exclusive
+    log.info("Data window: %s -> %s (previous check -> current check)", prev, cur)
+
+    prev_report = prev_report or cfg.get("report", {}).get("previous_report")
+    if prev_report and prev.isoformat() not in history:
+        history[prev.isoformat()] = read_report_statuses(prev_report)
+        log.info("Previous statuses loaded from %s (%d channels)", prev_report, len(history[prev.isoformat()]))
+    prev_status = previous_statuses(history, prev)
+    if not prev_status:
+        log.warning("No previous statuses found -> Previous Status will show '%s'.", NONE)
+
+    jobs = [(c, ch) for c in cfg["clients"]
+            if c.get("enabled", True) and (not clients or c["client"] in clients)
+            for ch in c["channels"] if ch.get("enabled", True)]
+    log.info("Checking %d channels ...", len(jobs))
+
+    results = {}
+    workers = 1 if debug else cfg["rules"]["workers"]
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        futs = {}
+        for i, (c, ch) in enumerate(jobs):
+            dbg = "debug_raw.txt" if (debug and i == 0) else None
+            futs[ex.submit(check_channel, cfg, c["client"], ch, start, end, today, demo, dbg)] = (c["client"], ch["channel"])
+        done = 0
+        for f in as_completed(futs):
+            results[futs[f]] = f.result()
+            done += 1
+            if progress:
+                progress(done, len(futs))
+            if done % 25 == 0 or done == len(futs):
+                log.info("  %d/%d done", done, len(futs))
+
+    rows, flat, new_status = [], [], {}
+    for c in cfg["clients"]:
+        meters = {}
+        for ch in c["channels"]:
+            res = results.get((c["client"], ch["channel"]))
+            if not res:
+                continue
+            k = key_of(ch["meter_name"], ch["channel_name"])
+            new_status[k] = res["cur"]
+            pv = prev_status.get(k, NONE)
+            meters.setdefault(ch["meter_name"], []).append(
+                (ch["channel_name"], pv, res["cur"], res["reason"], res.get("red", False)))
+            flat.append({"client": c["name"], "client_id": c["client"], "meter": ch["meter_name"],
+                         "channel": ch["channel_name"], "prev": pv, "cur": res["cur"],
+                         "reason": res["reason"], "red": res.get("red", False)})
+        if meters:
+            rows.append((c["name"], list(meters.items())))
+
+    out = Path(out_path) if out_path else out_dir / f"Load_Status_{cur:%Y-%m-%d}{'_demo' if demo else ''}.xlsx"
+    write_excel(rows, out, f"{fmt_d(prev)} to {fmt_d(cur)}", fmt_d(prev), fmt_d(cur))
+
+    bad = sum(1 for r in results.values() if r["cur"] == BAD)
+    gaps = sum(1 for r in results.values() if r["cur"] == OK and r.get("red"))
+    summary = {"total": len(results), "bad": bad, "gaps": gaps, "ok": len(results) - bad - gaps}
+    meta = {"previous": prev.isoformat(), "current": cur.isoformat(), "generated": datetime.now().isoformat(timespec="seconds"),
+            "demo": demo, "summary": summary, "rows": flat}
+    out.with_suffix(".json").write_text(json.dumps(meta, ensure_ascii=False), encoding="utf-8")
+
+    all_bad = bool(results) and bad == len(results)
+    if all_bad:
+        log.warning("EVERY channel is %s - looks like a failure, so status_history.json was NOT updated.", BAD)
+    if save and not demo and not clients and not all_bad:
+        history[cur.isoformat()] = new_status
+        hist_path.write_text(json.dumps(history, indent=1, ensure_ascii=False), encoding="utf-8")
+        log.info("Statuses saved to %s", hist_path)
+    elif save and not demo and clients:
+        log.info("Only some clients were checked: history not updated (partial run).")
+    log.info("Report saved: %s  (%d channels, %d currently %s)", out, len(results), bad, BAD)
+    return {"file": out.name, "path": str(out), **meta}
+
+
+# =============================================================================
+# Command line
 # =============================================================================
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -615,21 +700,17 @@ def main():
 
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
     cfg = load_config(args.config)
-    today = date.today()
     out_dir = Path(cfg.get("output_dir", "reports"))
     out_dir.mkdir(parents=True, exist_ok=True)
-    hist_path = out_dir / "status_history.json"
-    history = load_history(hist_path)
-
-    prev, cur = resolve_dates(cfg, history, today)
-    start, end = prev, cur + timedelta(days=1)                # end exclusive
-    log.info("Data window: %s -> %s (previous check -> current check)", prev, cur)
+    history = load_history(out_dir / "status_history.json")
+    prev, cur = resolve_dates(cfg, history, date.today())
 
     if args.probe:
         cl, chn = args.probe
         api = cfg["api"]
+        end = cur + timedelta(days=1)
         r = requests.get(api["url"], params={"token": api["token"], "fr": api.get("resolution", "min15"),
-                         "fillValue": "", "to": end.isoformat(), "from": start.isoformat(),
+                         "fillValue": "", "to": end.isoformat(), "from": prev.isoformat(),
                          "channel": chn, "client": cl}, timeout=60)
         print("HTTP", r.status_code, "| bytes:", len(r.text), "| content-type:", r.headers.get("content-type"))
         print("RAW START:\n", r.text[:1500])
@@ -639,69 +720,8 @@ def main():
             print(ser.head(5), "\n...\n", ser.tail(3))
         return
 
-    # Previous status source
-    prev_report = args.prev_report or cfg.get("report", {}).get("previous_report")
-    if prev_report and prev.isoformat() not in history:
-        history[prev.isoformat()] = read_report_statuses(prev_report)
-        log.info("Previous statuses loaded from %s (%d channels)", prev_report, len(history[prev.isoformat()]))
-    prev_status = previous_statuses(history, prev)
-    if not prev_status:
-        log.warning("No previous statuses found -> Previous Status will show '%s'. "
-                    "Use --prev-report <old report.xlsx> to seed it.", NONE)
-
-    jobs = []
-    for c in cfg["clients"]:
-        if not c.get("enabled", True) or (args.client and c["client"] not in args.client):
-            continue
-        for ch in c["channels"]:
-            if ch.get("enabled", True):
-                jobs.append((c, ch))
-    log.info("Checking %d channels ...", len(jobs))
-
-    results = {}
-    workers = 1 if args.debug else cfg["rules"]["workers"]
-    with ThreadPoolExecutor(max_workers=workers) as ex:
-        futs = {}
-        for i, (c, ch) in enumerate(jobs):
-            dbg = "debug_raw.txt" if (args.debug and i == 0) else None
-            futs[ex.submit(check_channel, cfg, c["client"], ch, start, end, today, args.demo, dbg)] = (c["client"], ch["channel"])
-        done = 0
-        for f in as_completed(futs):
-            results[futs[f]] = f.result()
-            done += 1
-            if done % 25 == 0 or done == len(futs):
-                log.info("  %d/%d done", done, len(futs))
-
-    rows, new_status = [], {}
-    for c in cfg["clients"]:
-        meters = {}
-        for ch in c["channels"]:
-            res = results.get((c["client"], ch["channel"]))
-            if not res:
-                continue
-            k = key_of(ch["meter_name"], ch["channel_name"])
-            new_status[k] = res["cur"]
-            meters.setdefault(ch["meter_name"], []).append(
-                (ch["channel_name"], prev_status.get(k, NONE), res["cur"], res["reason"],
-                 res.get("red", False)))
-        if meters:
-            rows.append((c["name"], list(meters.items())))
-
-    out = Path(args.output) if args.output else out_dir / f"Load_Status_{cur:%Y-%m-%d}.xlsx"
-    write_excel(rows, out, f"{fmt_d(prev)} to {fmt_d(cur)}", fmt_d(prev), fmt_d(cur))
-
-    all_bad = results and all(r["cur"] == BAD for r in results.values())
-    if all_bad:
-        log.warning("EVERY channel is %s - looks like a failure, so status_history.json was NOT updated.", BAD)
-    if not args.demo and not args.no_save and not args.client and not all_bad:
-        history[cur.isoformat()] = new_status
-        hist_path.write_text(json.dumps(history, indent=1, ensure_ascii=False), encoding="utf-8")
-        log.info("Statuses saved to %s", hist_path)
-    elif not args.demo and not args.no_save and not all_bad:
-        log.info("--client used: history not updated (partial run).")
-
-    bad = sum(1 for r in results.values() if r["cur"] == BAD)
-    log.info("Report saved: %s  (%d channels, %d currently %s)", out, len(results), bad, BAD)
+    run_report(cfg, prev, cur, clients=args.client, demo=args.demo, prev_report=args.prev_report,
+               save=not args.no_save, out_path=args.output, debug=args.debug)
 
 
 if __name__ == "__main__":
