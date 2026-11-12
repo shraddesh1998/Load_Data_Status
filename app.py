@@ -41,11 +41,26 @@ def index():
     cfg = get_cfg()
     history = lr.load_history(Path(cfg["output_dir"]) / "status_history.json")
     rep = cfg.get("report", {})
+
     prev = rep.get("previous_checked_date") or (sorted(history)[-1] if history else "")
-    cur = rep.get("current_checked_date") or date.today().isoformat()
-    clients = [{"id": c["client"], "name": c["name"], "channels": sum(1 for ch in c["channels"] if ch.get("enabled", True))}
-               for c in cfg["clients"] if c.get("enabled", True)]
-    return render_template("index.html", clients=clients, prev=prev, cur=cur, has_history=bool(history))
+    cur = date.today().isoformat()
+
+    clients = [
+        {
+            "id": c["client"],
+            "name": c["name"],
+            "channels": sum(1 for ch in c["channels"] if ch.get("enabled", True))
+        }
+        for c in cfg["clients"] if c.get("enabled", True)
+    ]
+
+    return render_template(
+        "index.html",
+        clients=clients,
+        prev=prev,
+        cur=cur,
+        has_history=bool(history)
+    )
 
 
 @app.post("/api/run")
