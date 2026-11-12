@@ -2,7 +2,7 @@
   "_help": "Edit this file instead of the code. Dates: start inclusive, end exclusive. 'report' controls the status report: data is fetched from previous_checked_date to current_checked_date (leave current empty = today; leave previous empty = date of last saved run). 'previous_report' = old report .xlsx used once to fill Previous Status. 'periods', 'thresholds' and 'chart' are not used by the status report.",
   "api": {
     "resolution": "min15",
-    "token": "xxxxxxxxxxxx",
+    "token": "936DA01F-9ABD-4D9D-80C7-02AF85C822A8",
     "token_configured": true,
     "url": "https://www11.enexion-sys.de/loaddata.asmx/GetLoadDataV2"
   },
